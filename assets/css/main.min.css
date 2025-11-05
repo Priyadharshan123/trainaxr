@@ -5,6 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+
+ 
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -11997,7 +12000,7 @@ select.default:active {
     .mob-btn {
         position: absolute;
         margin: 0px;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: transparent;
         cursor: pointer;
         right: 10px;
         top: 50%;
@@ -12121,12 +12124,12 @@ body.show-menu {
 
 body.show-menu .mob-btn {
     z-index: 10;
-    background-color: #212529
+    background-color: #212529;
 }
 
 body.show-menu .mob-btn span {
     transform: rotate(-45deg);
-    background-color: #fff
+    background-color: #fff;
 }
 
 body.show-menu .mob-btn span+span {

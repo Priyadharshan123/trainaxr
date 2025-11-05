@@ -1,31 +1,32 @@
-$('.mob-btn').on('click', function() {
-  $('.main-nav').toggleClass('open');
-  $('.overlay').toggleClass('show');
-});
 
 
+
+// Back to top functionality
 const getBTTElm = document.getElementById('back-to-top');
-document.addEventListener('scroll', ev => {
-    if (window.scrollY > 150) {
-        getBTTElm.classList.add('visible');
-    } else {
-        getBTTElm.classList.remove('visible');
-    }
-});
-getBTTElm.addEventListener('click', e => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (getBTTElm) {
+    document.addEventListener('scroll', ev => {
+        if (window.scrollY > 150) {
+            getBTTElm.classList.add('visible');
+        } else {
+            getBTTElm.classList.remove('visible');
+        }
     });
-})
+    getBTTElm.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
-// menu function
-
+// Mobile menu function
 const getBtn = document.querySelector('.mob-btn');
-getBtn.addEventListener('click', e => {
-    document.querySelector('body').classList.toggle('show-menu');
-})
+if (getBtn) {
+    getBtn.addEventListener('click', e => {
+        document.body.classList.toggle('show-menu');
+    });
+}
 
 
 const getDropDown = document.getElementsByClassName('main-nav');
@@ -138,7 +139,7 @@ const boxes = gsap.utils.toArray('.fadein-item');
 
 
 
-boxes && boxes.forEach((box, i) => {
+if (boxes) boxes.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0,
         y: 20
@@ -166,7 +167,7 @@ boxes && boxes.forEach((box, i) => {
 
 
 const contentsitem = gsap.utils.toArray('.movein-content');
-contentsitem && contentsitem.forEach((box, i) => {
+if (contentsitem) contentsitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0.1,
         y: 15
@@ -190,7 +191,7 @@ contentsitem && contentsitem.forEach((box, i) => {
 });
 
 const zoomimgitem = gsap.utils.toArray('.img-zoom-in');
-zoomimgitem && zoomimgitem.forEach((box, i) => {
+if (zoomimgitem) zoomimgitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0.8,
         scale: 0.95,
@@ -216,7 +217,7 @@ zoomimgitem && zoomimgitem.forEach((box, i) => {
 });
 
 const moveimgitem = gsap.utils.toArray('.img-move-in');
-moveimgitem && moveimgitem.forEach((box, i) => {
+if (moveimgitem) moveimgitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         x: 10,
         scale: 1.05
