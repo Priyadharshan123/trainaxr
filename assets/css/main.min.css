@@ -12219,7 +12219,7 @@ body.show-menu .mob-btn span+span {
 
 @media(max-width: 575.9px) {
     .main-header .logo {
-        max-width: 140px
+        max-width: 140px;
     }
 }
 
