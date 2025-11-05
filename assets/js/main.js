@@ -138,7 +138,7 @@ const boxes = gsap.utils.toArray('.fadein-item');
 
 
 
-boxes ? .forEach((box, i) => {
+boxes && boxes.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0,
         y: 20
@@ -166,7 +166,7 @@ boxes ? .forEach((box, i) => {
 
 
 const contentsitem = gsap.utils.toArray('.movein-content');
-contentsitem ? .forEach((box, i) => {
+contentsitem && contentsitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0.1,
         y: 15
@@ -190,7 +190,7 @@ contentsitem ? .forEach((box, i) => {
 });
 
 const zoomimgitem = gsap.utils.toArray('.img-zoom-in');
-zoomimgitem ? .forEach((box, i) => {
+zoomimgitem && zoomimgitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         autoAlpha: 0.8,
         scale: 0.95,
@@ -216,7 +216,7 @@ zoomimgitem ? .forEach((box, i) => {
 });
 
 const moveimgitem = gsap.utils.toArray('.img-move-in');
-moveimgitem ? .forEach((box, i) => {
+moveimgitem && moveimgitem.forEach((box, i) => {
     const anim = gsap.fromTo(box, {
         x: 10,
         scale: 1.05
