@@ -47,6 +47,21 @@ getDropDownClick.forEach((item) => {
     })
 })
 
+// Also make the dropdown label clickable on mobile (some pages hide the <i> chevron)
+const dropdownAnchors = document.querySelectorAll('.main-nav .dropdown-toggle');
+dropdownAnchors.forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        // only intercept on mobile / tablet widths where menu is collapsed
+        if (window.innerWidth <= 1199) {
+            const li = this.closest('li');
+            if (li) {
+                e.preventDefault();
+                li.classList.toggle('open');
+            }
+        }
+    });
+});
+
 //animation
 // just "anim" in your element
 window.addEventListener("load", () => {
