@@ -1,3 +1,9 @@
+$('.mob-btn').on('click', function() {
+  $('.main-nav').toggleClass('open');
+  $('.overlay').toggleClass('show');
+});
+
+
 const getBTTElm = document.getElementById('back-to-top');
 document.addEventListener('scroll', ev => {
     if (window.scrollY > 150) {
