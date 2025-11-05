@@ -1,0 +1,83 @@
+$responsives:(
+    40 18,55 28,65 28,75 35,
+  ); 
+
+  $rsize: 0;
+
+@mixin resfonts($val1,$val2){
+    .fz#{$val1}-#{$val2}{ font-size: var(--r#{$val1}-#{$val2}); }
+}
+
+@each $resp in $responsives{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    @include resfonts($large,$small)
+  }
+  
+  @include min(1200){
+    @each $resp in $responsives{
+      $large: nth($resp,1);
+      $small: nth($resp,2);
+      :root{
+        $val: calc(($large - $small )/ 4);
+        // $val: ($large - $small) / 4;
+          --rz#{$large}: #{$large}px;
+      }
+    }
+  }
+  @include min-max(992,1199.9){
+    @each $resp in $responsives{
+      $large: nth($resp,1);
+      $small: nth($resp,2);
+      :root{
+        $val: calc(($large - $small )/ 4);
+        // $val: ($large - $small) / 4;
+        --rz#{$large}: #{$small + ($val * 3)}px;
+      }
+    }
+  }
+  @include min-max(768,991.9){
+    @each $resp in $responsives{
+      $large: nth($resp,1);
+      $small: nth($resp,2);
+      :root{
+        $val: calc(($large - $small )/ 4);
+        // $val: ($large - $small) / 4;
+        --rz#{$large}: #{$small + ($val * 2)}px;
+      }
+    }
+  }
+  @include min-max(576,767.9){
+    @each $resp in $responsives{
+      $large: nth($resp,1);
+      $small: nth($resp,2);
+      :root{
+        $val: calc(($large - $small )/ 4);
+        // $val: ($large - $small) / 4;
+        --rz#{$large}: #{$small + ($val)}px;
+      }
+    }
+  }
+  
+  @include max(575.9){
+    @each $resp in $responsives{
+      $large: nth($resp,1);
+      $small: nth($resp,2);
+      :root{
+        $val: calc(($large - $small )/ 4);
+        // $val: ($large - $small) / 4;
+        --rz#{$large}: #{$small}px;
+      }
+    }
+  }
+
+
+  
+
+@each $rval in $rsize{
+    :root{
+        --resb#{$rval}: #{$rval}px;
+    }
+}
+
+

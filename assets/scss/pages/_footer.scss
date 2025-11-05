@@ -1,0 +1,253 @@
+.footer{
+    background-color: #0D0D0D;
+    padding-top: var(--res90-40);
+    .footer-card-wrap{
+        color: white;
+        .card-title{
+            font-size: size(16);
+            line-height: size(22);
+            margin-bottom: size(27);
+            pointer-events: none;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0px;
+            li{
+                font-size: size(14);
+                margin-bottom: 15px;
+                line-height: 19px;
+                a{
+                   text-decoration: none;
+                   @include link-hover(rgba(#FFFFFF,0.6),#ffffff);
+                }
+            }
+        }
+        &.card-address{
+            ul{
+                li{
+                    margin-bottom: 0px;
+                    color: rgba(#FFFFFF,0.6);
+                    a{
+                        color: inherit;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .social-media-links{
+            li{
+                display: inline-block;
+                margin-right: 30px;
+                a{
+                    color: rgba(#FFFFFF,0.8);
+                    font-size: size(17);
+                }
+            }
+            @include max(991.9){
+                margin-bottom: 0px!important;
+                li{
+                    margin-bottom: 0px!important;
+                }
+            }
+        }
+    }
+    .footer-contentmain-row{
+        position: relative;
+    }
+    .footer-card-body{
+        ul li{
+            a.active{
+                color: white!important;
+            }
+        }
+    }
+}
+.footer-divider{
+    color: #3C3C3C;
+    margin-top: var(--res100-40);
+    opacity: 1;
+}
+.footer-copy-rights{
+    color: rgba(255,255,255,0.4);
+    font-size: size(14);
+    margin-top: var(--res45-30);
+    padding-bottom: var(--res45-40);
+    p{
+        margin-bottom: 0px;
+    }
+    ul{
+        padding-left: 0px;
+        margin-bottom: 0px;
+        li{
+            display: inline-block;
+            padding-right: 10px;
+        }
+    }
+    a{
+        @include link-hover(rgba(255,255,255,0.4),rgba(255,255,255,1));
+    }
+    @include max(991.9){
+        >.col-xl-4{
+            font-size: 15px;
+            &:nth-child(1){
+                order: 2;
+            }
+            &:nth-child(2){
+                order: 1;
+                ul{
+                    li{
+                        line-height: 100%;
+                        margin-bottom: 7px;
+                        &:nth-child(1){
+                            padding-right: 10px;
+                        }
+                    }
+                    li + li{
+                        border-left: 2px solid currentColor;
+                        padding-left: 12px;
+                    }
+                }
+            }
+            &:nth-child(3){
+                order: 3;
+            }
+        }
+    }
+    
+    
+}
+.our-location-address-card{
+    // border-top: 1px solid #3C3C3C;
+    li{
+        
+        a{
+            &:hover{
+                color: white!important;
+                opacity: 1!important;
+            }
+        }
+    }
+}
+
+@include max(991.9){
+    .footer{
+        padding-top: var(--res56-6);
+    }
+    .footer-card-wrap{
+        .footer-card-header{
+
+        }
+        .footer-card-body{
+            max-height: 0px;
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        .footer-card-header.active ~ .footer-card-body{
+            max-height: 1000px;
+        }
+
+    }
+    .our-location-address-card{
+        // border-top: 1px solid #3C3C3C;
+        padding-top: 34px;
+        li{
+            
+            a{
+                &:hover{
+                    color: $primary!important;
+                    opacity: 1!important;
+                }
+            }
+        }
+    }
+    .footer-links-page-liks .footer-card-wrap{
+        border-bottom: 1px solid #3C3C3C;
+        .footer-card-header{
+            padding-top: 29px;
+            padding-bottom: 29px;
+            .card-title{
+                position: relative;
+                padding-right: 30px;
+                &:after{
+                    content: "\e918";
+                    @include icomoon();
+                    font-size: 12px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+            &.active{
+                .card-title{
+                    &:after{
+                        content: "\e917";
+                    }
+                }
+            }
+        }
+        .footer-card-body{
+            ul{
+                padding-bottom: 29px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .footer-divider{
+        margin-top: 34px;
+    }
+    
+    .footer-links-page-liks{
+        .footer-card-wrap{
+            .footer-card-header{
+                .card-title{
+                    margin-bottom: 0px!important;
+                    font-size: 18px!important;
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+            .footer-card-body{
+                li{
+                    margin-bottom: 20px;
+                    a{
+                        font-size: 16px!important;
+                        color: rgba(#FFFFFF,0.8);
+                    }
+                }
+            }
+        }
+    }
+    .footer-card-wrap{
+        .card-title{
+            font-size: 16px!important;
+            font-weight: 600;
+            color: rgba(#FFFFFF,0.7);
+            
+        }
+        ul{
+            li{
+                a{
+                    font-size: 18px!important;
+                }
+            }
+        }
+        &.our-location-address-card{
+            .card-title{
+                margin-bottom: 16px!important;
+            }
+            ul{
+                li{
+                    &,a{
+                        font-size: 16px!important;
+                        font-weight: 400;
+                        line-height: 23px;
+                        color: rgba(#FFFFFF,0.9)!important;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

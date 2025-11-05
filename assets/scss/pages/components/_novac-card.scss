@@ -1,0 +1,79 @@
+
+.wc-novac-card{
+    .novac-card-row{
+        
+        @include min(768){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .wc-col{
+       padding-bottom: 30px;
+       @include min(768){
+        padding-left: 15px;
+        padding-right: 15px;
+       }
+       @include max(767.9){
+        padding-bottom: 12px;
+       }
+    }
+    .wc-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background: #101010;
+        border-radius: 25px;
+        padding: 70px 40px;
+        @include max(1199.98){
+            border-radius: 15px;
+            padding: 46px 31px;
+        }
+        @include max(767.98){
+            border-radius: 8px;
+            padding: 22px 22px;
+        }
+        .wc-card-icon{
+            padding-bottom: 70px;
+            @include max(767.98){
+                padding-bottom: 0;
+            }
+            img{
+                @include max(767.98){
+                 width: 100%;
+                height: 100;
+                max-width: 43px;
+                max-height: 43px;
+
+                }
+            }
+           
+        }
+        .wc-card-name{
+            @include max(767.98){
+                padding-left: 22px;
+            }
+            h5{
+                @include max(1199.98){
+                    font-size: 21px;
+                }
+                @include max(767.98){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        @include max(767.98){
+             display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: row;
+            justify-content: unset;
+            align-items: center;
+            height: 100%;
+            background: #101010;
+            border-radius: 8px;
+            padding: 22px 22px;
+        }
+    }
+}

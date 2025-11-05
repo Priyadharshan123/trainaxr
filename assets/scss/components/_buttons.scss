@@ -1,0 +1,89 @@
+#back-to-top {
+  background-color: #1A1A1A;
+  bottom: 15px;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  transform: translateY(20px);
+  transition: 0.5s all ease;
+  width: 68px;
+  height: 68px;
+  border-radius: 100px;
+  z-index: 99;
+  text-decoration: none;
+  mix-blend-mode: exclusion;
+  font-size: 12px;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // &:before,
+  &:after {
+    // border: solid $white;
+    // border-width: 2px 0 0 2px;
+    // bottom: 8px;
+    // content: '';
+    // display: inline-block;
+    // height: 14px;
+    // left: 10px;
+    // position: absolute;
+    // transform: rotate(45deg);
+    transition: 0.1s all ease;
+    transform: translateY(0px);
+    // width: 14px;
+    content: "\e911";
+    @include icomoon();
+    text-shadow: 0 49px white;
+  }
+
+  &:after {
+    bottom: -20px;
+  }
+@include min(992){
+  &:hover {
+    background-color: $secondary;
+    text-decoration: none;
+
+    // &:before {
+    //   border-color: $white;
+    //   bottom: 30px;
+    // }
+
+    // &:after {
+    //   border-color: $white;
+    //   bottom: 8px;
+    // }
+
+    &:after {
+      border-color: $white;
+      bottom: 8px;
+      transform: translateY(-50px);
+    }
+  }
+}
+  
+  @include min(1600){
+    right: -90px;
+    transform: translateY(50px)!important;
+  }
+  @include max(1599.9){
+    transform: translateY(94px)!important;
+  }
+  @include max(1199) {
+    transform: translateY(25px)!important;
+  }
+  @include max(575.9) {
+    width: 48px;
+    height: 48px;
+  }
+  @include max(379.9) {
+    transform: translateY(-18px)!important;
+  }
+}

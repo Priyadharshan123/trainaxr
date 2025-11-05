@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   
+   
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/pages/industry-icons.css">
+    <link rel="stylesheet" href="assets/css/pages/about-us.css">
+
+     <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="assets/css/pages/ar-vr-in-manufacturing-industry.css">
+  <link rel="stylesheet" href="assets/css/pages/ar-vr-in-real-estate.css">
+  <link rel="stylesheet" href="assets/css/pages/insight-detail-page.css">
+  <link rel="stylesheet" href="assets/css/pages/metaverse-services.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+ 
+  
+  
+
+<style>
+
+/*     demo content  */
+.demo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* Fix container width to remove extra padding */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* On smaller screens, stack them */
+
+@media (max-width: 992px) {
+  .demo-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.shd-curating-l,
+.demo-left,
+.a-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image sizing */
+.shd-curating-l img,
+.a-img img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+
+       
+
+        .demo-text {
+            padding: 40px;
+        }
+
+        .demo-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0dcaf0;
+        }
+
+        .demo-text h4 {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #f4f0f0;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .demo-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .demo-text {
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .demo-form-section {
+            padding: 60px 0;
+             background-image: url("assets/images/metaverse/service-1/bg2.png");
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+           border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+             
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #f6f4f4;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+    /* Partners section - updated to match requested layout */
+    .partners-section {
+      
+      padding-bottom: 100px ;
+      text-align: center;
+       /* dark background similar to screenshot */
+      color: #0dcaf0;
+       background-image: url("assets/images/metaverse/service-1/bg2.png");
+    }
+
+    .partners-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .partners-section h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+     
+      color: #0dcaf0;
+      text-align: center;
+      
+    }
+
+    .partners-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: nowrap;
+      max-width: 900px;
+      margin: 0 auto 26px;
+      padding:20px;
+    }
+
+    .partner-logo {
+      filter: grayscale(100%);
+      transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+      max-height: 48px;
+      width: auto;
+      opacity: 0.95;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(0%);
+      transform: translateY(-4px) scale(1.02);
+      opacity: 1;
+    }
+
+    /* Social icons row (boxed buttons centered) */
+    .partner-socials {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      background: transparent;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: background 0.15s ease, transform 0.12s ease, border-color 0.12s ease;
+    }
+
+    .social-btn:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    /* keep responsive: allow logos to wrap on small screens */
+    @media (max-width: 700px) {
+      .partners-grid {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .partner-logo { max-height: 42px; }
+    }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .success-message {
+            display: none;
+            background: #fefffe;
+            color: rgb(244, 248, 245);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            .form-container {
+                margin: 0 20px;
+            }
+        }
+
+        .form-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.demo-text {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* When active */
+.form-container.show {
+  display: block;
+  opacity: 1;
+}
+
+.demo-text.hide {
+  opacity: 0;
+}
+
+.demo-left {
+  flex: 1;
+  min-width: 320px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.a-img {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.a-img img {
+  max-width: 75%;
+  height: auto;
+}
+
+/* Fade effect */
+.form-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  }
+
+.form-container.show {
+  display: block;
+  opacity: 1;
+}
+
+.demo-text {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.demo-text.hide {
+  opacity: 0;
+}
+
+/* Button style */
+.back-btn {
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  text-decoration:wavy;
+  cursor: pointer;
+  font: inherit;
+  color:#f4f4f5
+}
+
+/* --- Underline-only Input Style --- */
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Line input style */
+.form-group input,
+.form-group select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #f9f5f5;
+}
+
+/* Focus effect — line color change */
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: #007bff;
+}
+
+/* Placeholder color */
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* Dropdown styling */
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Add small down arrow for select (optional) */
+.form-group select::-ms-expand {
+  display: none;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Success message */
+.success-message {
+  margin-top: 10px;
+  color: #28a745;
+  display: none;
+}
+
+/* Back button */
+.back-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #fff;
+  max-width: 700px;
+}
+
+.form-container.show {
+  display: block;
+  opacity: 1;
+}
+
+.demo-text.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Form layout */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* Input underline style */
+.form-group input,
+.form-group select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 8px 2px;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-group select option {
+  background-color:  rgba(0, 0, 0, 0.6);
+
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom: 1px solid #00bfff;
+}
+
+/* Button styles */
+.submit-btn {
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: fit-content;
+}
+
+.submit-btn:hover {
+  background: #0095cc;
+}
+
+/* Back button */
+.back-btn {
+  background: none;
+  border: none;
+  color: #00bfff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Success message */
+.success-message {
+  margin-top: 15px;
+  color: #00ffae;
+  font-size: 14px;
+  display: none;
+}
+/* Pure line input style */
+.form-group input,
+.form-group select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  padding: 6px 2px;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  transition: border-color 0.3s ease;
+  appearance: none; /* remove select dropdown styling */
+}
+
+/* Hover and focus — brightens the underline */
+.form-group input:hover,
+.form-group select:hover,
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: #00bfff;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Remove dropdown arrow shadow or box */
+.form-group select {
+  background-image: none;
+}
+
+/* Optional: to make dropdown arrow minimal (white) */
+.form-group select::-ms-expand {
+  display: none; /* hides default arrow in Edge/IE */
+}
+.form-container {
+  background: transparent;
+  color: #fff;
+}
+
+/* Popup Overlay */
+/* Toast popup (top slide-down style) */
+.toast-popup {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d0d0d;
+  color: #0dcaf0
+  padding: 14px 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Show state */
+.toast-popup.show {
+  top: 30px;
+  opacity: 1;
+}
+
+
+</style>
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const bookNowBtn = document.getElementById("bookNowBtn");
+  const demoText = document.getElementById("demoText");
+  const formContainer = document.getElementById("formContainer");
+  const backBtn = document.getElementById("backBtn");
+
+  // Show form and hide text
+  bookNowBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    demoText.classList.add("hide");
+    setTimeout(() => {
+      demoText.style.display = "none";
+      formContainer.style.display = "block";
+      setTimeout(() => formContainer.classList.add("show"), 50);
+    }, 500);
+  });
+
+  // Back to text
+  backBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    formContainer.classList.remove("show");
+    setTimeout(() => {
+      formContainer.style.display = "none";
+      demoText.style.display = "block";
+      setTimeout(() => demoText.classList.remove("hide"), 50);
+    }, 500);
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const demoForm = document.getElementById("demoForm");
+
+  demoForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent reload
+
+    // Create popup element
+    const popup = document.createElement("div");
+    popup.classList.add("toast-popup");
+    popup.textContent = "Thank you! We'll contact you shortly to schedule your demo.";
+
+    document.body.appendChild(popup);
+
+    // Trigger slide-in
+    setTimeout(() => popup.classList.add("show"), 100);
+
+    // Auto hide after 3 seconds
+    setTimeout(() => {
+      popup.classList.remove("show");
+      setTimeout(() => popup.remove(), 400);
+    }, 3000);
+  });
+});
+</script>
+
+
+
+
+
+   
+ 
+ 
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // -- Collapsible sections (About Us) --
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    // Close all other open sections first
+                    var allCollapsible = document.getElementsByClassName("collapsible");
+                    for (var j = 0; j < allCollapsible.length; j++) {
+                        if (allCollapsible[j] !== this) {
+                            allCollapsible[j].classList.remove("active");
+                            allCollapsible[j].setAttribute('aria-expanded', 'false');
+                            var otherContent = allCollapsible[j].nextElementSibling;
+                            if (otherContent) otherContent.style.maxHeight = null;
+                        }
+                    }
+                    // Toggle the clicked section
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (!content) return;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            // -- Team cards: toggle on card click and ensure only clicked card opens --
+            var teamCards = document.querySelectorAll('.team-card');
+            var expandedCard = null;
+            teamCards.forEach(function(card){
+                var bio = card.querySelector('.team-bio');
+                if (!bio) return;
+
+                // click on the card toggles its bio
+                card.addEventListener('click', function(e){
+                    // if clicking inside the bio content, ignore to allow links/selecting text
+                    if (e.target.closest('.team-bio')) return;
+
+                    // toggle the clicked card
+                    if (expandedCard === card) {
+                        bio.style.maxHeight = null;
+                        card.classList.remove('active');
+                        expandedCard = null;
+                        return;
+                    }
+
+                    // close previously expanded card
+                    if (expandedCard) {
+                        var prevBio = expandedCard.querySelector('.team-bio');
+                        if (prevBio) prevBio.style.maxHeight = null;
+                        expandedCard.classList.remove('active');
+                    }
+
+                    // open current
+                    bio.style.maxHeight = bio.scrollHeight + 'px';
+                    card.classList.add('active');
+                    expandedCard = card;
+                });
+            });
+            // clicking outside should close any open card
+            document.addEventListener('click', function(e){
+                if (!expandedCard) return;
+                if (e.target.closest && !e.target.closest('.team-card')) {
+                    var prevBio = expandedCard.querySelector('.team-bio');
+                    if (prevBio) prevBio.style.maxHeight = null;
+                    expandedCard.classList.remove('active');
+                    expandedCard = null;
+                }
+            });
+        });
+    </script>
+
+
+ <header class="main-header">
+        <div class="container d-flex align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="C:\Users\pdhar\OneDrive\Desktop\t5\assets\images\home\Picture3.png" height="40px"/>
+                </a>
+            </div>
+            <div class="header-right ms-auto d-flex align-items-center">
+                <nav class="main-nav">
+                    <ul>
+                          <li><a href="index.html" id="insights-nav"><span>Home</span></a></li>
+                      <li class="dropdown">
+    <a class="dropdown-toggle" href="#" id="industries-nav" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>Industry</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="industries-nav">
+
+                                <li>
+                                    <a class="dropdown-item" href="healthcare.html"  id="ar-vr-in-chemical-industry-nav">
+                                        <span>AR VR in Medical & Healthcare</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="manufacture.html"  id="ar-vr-in-banking-and-financial-services-nav">
+                                        <span>AR VR in Manufacturing </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="aviation.html"  id="ar-vr-in-health-and-safety-training-nav">
+                                        <span>AR VR in Avation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="education.html"  id="ar-vr-in-education-industry-nav">
+                                        <span>AR VR in Education Industry</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="safety.html"  id="ar-vr-in-education-industry-nav">
+                                        <span>AR VR in Safety Training</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="realestate.html"  id="ar-vr-in-education-industry-nav">
+                                        <span>AR VR in Real Estate Industry</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="defence.html"  id="ar-vr-in-education-industry-nav">
+                                        <span>AR VR in Defence</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="engineering.html"  id="ar-vr-in-education-industry-nav">
+                                        <span>AR VR in Engineering</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        
+                        <li><a href="aboutus.html" id="insights-nav"><span>About Us</span></a></li>
+                        
+                        <li><a href="demo.html"><span>Request Demo</span></a></li>
+                       
+                    </ul>
+                    <div class="d-block d-lg-none get-in-touch-nav">
+                        <p>Get In Touch</p>
+                        <a href="mailto:info@trainaxr.com" class="know-more-btn">info@trainaxr.com<span class="icon-link-arrow ps-2"></span></a>
+                    </div>
+                </nav>
+
+
+                
+
+
+
+            </div>
+        </div>
+
+        <div class="mob-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="overlay"></div>
+    </header>
+ 
+    
+ 
+</head>
+
+
+
+<body>
+
+  
+
+
+
+
+
+<section class="demo-form-section">
+         
+       
+  <div class="container">
+     
+           
+    <div class="demo-content">
+
+           
+          
+      <!-- LEFT SIDE (Text + Form) -->
+        
+      <div class="demo-left">
+
+        <div class="demo-text" id="demoText">
+          
+          
+          <h1 class="hero-title">Experience the Future of XR Technology</h1>
+            <h2 class="hero-subtitle"></h2>
+            <p class="hero-text">Discover how our cutting-edge XR solutions can transform your business. Our expert team will guide you through a personalized demonstration tailored to your industry needs.</p>
+        
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#" id="bookNowBtn">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="form-container" id="formContainer">
+          
+
+           <form id="demoForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" required>
+              </div>
+              <div class="form-group">
+                <label for="companySize">Company Size:</label>
+                <select id="companySize" name="companySize">
+                  <option value="">Please Select</option>
+                  <option value="1-50">1–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="200+">200+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="industry">Industry:</label>
+                <select id="industry" name="industry">
+                  <option value="">Please Select</option>
+                  <option value="education">Education</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="manufacturing">Safety</option>
+                  <option value="manufacturing">Defence</option>
+                  <option value="manufacturing">aviation</option>
+                  <option value="manufacturing">realestate</option>
+                  <option value="manufacturing">Engineering</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="region">Region:</label>
+                <select id="region" name="region">
+                  <option value="">Please Select</option>
+                  <option value="asia">Asia</option>
+                  <option value="europe">Europe</option>
+                  <option value="america">America</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row single">
+              <button type="submit" class="submit-btn" >Schedule Demo</button>
+            </div>
+
+            
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (Image) -->
+      <div class="a-img">
+        <img src="assets/images/home/pop-up.png" alt="Demo illustration">
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+
+
+                          <!-- Our Partners Section (added) -->
+<section class="partners-section" aria-label="Our partners">
+  <div class="container">
+                                  <h1>Our Partners</h1>
+                                  
+                                  <div class="partners-grid">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\1.webp" alt="Partner 1" class="partner-logo">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\l7.webp" alt="Partner 5" class="partner-logo">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\l12.webp" alt="Partner 6" class="partner-logo">
+                                  </div>
+                                  <div class="partners-grid">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\1.webp" alt="Partner 1" class="partner-logo">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\l7.webp" alt="Partner 5" class="partner-logo">
+                                    <img src="C:\Users\pdhar\OneDrive\Desktop\new_trainaxr\assets\images\metaverse\ar-vr-in-automotive-industry\tech\l7.webp" alt="Partner 5" class="partner-logo">
+                                    
+                                 
+
+  </div>
+
+                              </section>
+
+<!-- Footer Section (StaplesVR style) -->
+<footer class="custom-footer">
+  <div class="footer-bg"></div>
+  <div class="footer-content">
+    <div class="footer-cols">
+      <div class="footer-col contact">
+        <div class="footer-location">
+          <span class="footer-city">United Kingdom – Headquarters</span><br>
+          <span class="footer-icon"></span>Dreamverse Limited<br>
+20–22 St Giles Street,<br> Northampton NN1 1JA
+<br>
+          <span class="footer-icon">📞</span> +64 9 217 3700
+        </div>
+        <div class="footer-location">
+          <span class="footer-city">India – Development & Creative Lab</span><br>
+          <span class="footer-icon"></span>#21, 35th A Cross, 4th T Block, Jayanagar, Bangalore<br>
+
+          <span class="footer-icon">📞</span> +61 2 9052 4955
+        </div>
+        <div class="footer-location">
+          <span class="footer-city">United States – North American Operations</span><br>
+        <span class="footer-icon"></span>724 S Oakley Blvd, Unit-1, Chicago, Illinois 60612<br>
+
+        </div>
+        <div class="partner-socials" role="navigation" aria-label="Social links" >
+        
+                                    <a class="social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><title>LinkedIn</title><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.66-1.26 2.28-2.6 4.7-2.6 5.03 0 6 3.3 6 7.6V24h-5V16.6c0-1.76-.03-4.02-2.45-4.02-2.45 0-2.82 1.9-2.82 3.9V24h-5V8z"/></svg>
+                                    </a>
+
+                                   
+
+                                    <a class="social-btn" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><title>YouTube</title><path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1C16.9 2.4 12 2.4 12 2.4h-.1s-4.9 0-7.6.4c-.5.1-1.3.1-2.1 1-.6.7-.8 2.4-.8 2.4S0 8 0 9.8v1.4C0 13.9.4 15.8.4 15.8s.2 1.7.8 2.4c.8.9 1.8.9 2.3 1 1.6.2 6.8.4 6.8.4s4.9 0 7.6-.4c.5-.1 1.3-.1 2.1-1 .6-.7.8-2.4.8-2.4s.4-2.1.4-3.9v-1.4c0-1.8-.4-3.6-.4-3.6zM9.8 15.1V8.8l6.1 3.15-6.1 3.15z"/></svg>
+                                    </a>
+
+                                    <a class="social-btn" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067C2.179 19.29 4.768 20 7.548 20c9.142 0 14.307-7.721 13.995-14.646a9.936 9.936 0 002.411-2.659z"/></svg>
+
+                                    <a class="social-btn" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><title>Instagram</title><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm8 3a1 1 0 110 2 1 1 0 010-2zM12 7.5A4.5 4.5 0 1012 16.5 4.5 4.5 0 0012 7.5zm0 2a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"/></svg>
+                                    </a>
+
+                                    <a class="social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><title>Facebook</title><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/></svg>
+
+                                    </a>
+
+
+
+      </div>
+                                
+      </div>
+      <div class="footer-col vr">
+        <span class="footer-heading">Navigation</span>
+        <ul>
+          <li>Home</li>
+          <li>industry</li>
+          <li>About Us</li>
+          <li>Request Demo</li>
+          <li>Privacy Policy</li>
+          
+         
+        </ul>
+      </div>
+      <div class="footer-col vr">
+        <span class="footer-heading">VR Solutions</span>
+        <ul>
+          <li>Aviation</li>
+          <li>Defence</li>
+          <li>Healthcare</li>
+          <li>Engineer</li>
+          <li>Education</li>
+          <li>Manufacturing</li>
+          <li>safety</li>
+          <li>Real Estate</li>
+        </ul>
+      </div>
+      <div class="footer-col services">
+        <span class="footer-heading">Services</span>
+        <ul>
+          <li>Consultancy</li>
+          <li>Metaverse</li>
+          <li>3D Scanning</li>
+          <li>360 Video</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Copyright Luminous Group Limited 2025</span>
+      <span class="footer-credit">This site is protected by the Trainaxr <a href="policy.html" >Privacy Policy</a> and Terms of Service apply.
+
+</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .custom-footer {
+    background: #0d0d0d;
+    color: #fff;
+    padding: 0;
+    position: relative;
+    font-family: 'Manrope', Arial, sans-serif;
+    margin-top: 0;
+    z-index: 10;
+  }
+  .footer-bg {
+    position: absolute;
+    inset: 0;
+    
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 24px 0 24px;
+  }
+  .footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .footer-col {
+    min-width: 180px;
+    flex: 1 1 220px;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .footer-heading {
+    color: #0dcaf0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-col ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .footer-col.contact .footer-city {
+    color: #0dcaf0;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-top: 10px;
+    display: block;
+  }
+  .footer-col.contact .footer-icon {
+    color: #0dcaf0;
+    font-size: 1.1em;
+    margin-right: 6px;
+  }
+  .footer-socials {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+  }
+  .footer-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 6px;
+    width: 38px;
+    height: 38px;
+    color: #fff;
+    transition: background 0.18s, color 0.18s;
+    font-size: 1.3rem;
+  }
+  .footer-social:hover {
+    background: #0dcaf0;
+    color: #222;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.98rem;
+    padding: 24px 0 18px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 18px;
+    color: #fff;
+    opacity: 0.8;
+  }
+  .footer-credit {
+    font-size: 0.98rem;
+    color: #fff;
+    opacity: 0.8;
+  }
+  @media (max-width: 900px) {
+    .footer-cols {
+      flex-direction: column;
+      gap: 18px;
+    }
+    .footer-content {
+      padding: 36px 10px 0 10px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px 0 12px 0;
+    }
+  }
+</style>
+
+
+    </body>

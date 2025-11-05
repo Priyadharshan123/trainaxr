@@ -1,0 +1,2499 @@
+.main-header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    padding-top: .8333333333rem;
+    padding-bottom: .8333333333rem;
+    z-index: 1049;
+    transition: none;
+    transform: none;
+    animation: none;
+}
+
+.shd-banner-t {
+    position: absolute;
+    top: 0;
+}
+
+.shd-banner-r {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+.manufacturing .shd-manufacturing-l {
+    position: absolute;
+    left: -85px;
+    top: 12%;
+}
+
+.manufacturing .shd-manufacturing-r {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.benefits .shd-benefits-l {
+    position: absolute;
+    left: 0;
+    top: 12%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.why-novac .shd-why-novac-l {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.curating .shd-curating-l {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.curating .shd-curating-c {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.curating .shd-curating-r {
+    position: absolute;
+    right: 0;
+    top: -85%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.ready .shd-ready-c {
+    position: absolute;
+    right: 0px;
+    top: -50%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.tech .shd-tech-r {
+    position: absolute;
+    right: 0;
+    top: -60%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.form-sec .shd-form-c {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.testimonial .shd-testimonial-c {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.resources .shd-resources-c {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    z-index: -1;
+    top: 0;
+}
+
+.faq-new .shd-faq-l {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* z-index: -1; */
+    top: -80%;
+}
+
+.metaverse-banner.bg .banner-sec {
+    padding-bottom: 100px;
+    background-image: none;
+}
+
+.metaverse-banner.bg .blog-banner-area {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    width: 85%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.metaverse-banner.bg .blog-banner-area h2 {
+    font-size: 40px;
+    color: #fff;
+    padding-bottom: 50px;
+    font-weight: 600;
+}
+
+.metaverse-banner.bg .blog-banner-area h2 {
+    font-size: 40px;
+    color: #fff;
+    padding-bottom: 30px;
+    font-weight: 600;
+    line-height: 54px;
+    padding-right: 0px;
+}
+
+.metaverse-banner.bg .banner-sec .bb-cont .bb-pro {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 10% 50%;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.metaverse-banner.bg .banner-sec .bb-cont span {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.metaverse-banner.bg .banner-sec .bb-cont .bb-pro p {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.metaverse-banner.bg .banner-sec .bb-cont audio {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.metaverse-banner.bg .banner-sec .btn {
+    display: inline-block;
+    padding: 10px 40px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.metaverse-banner.bg .banner-sec:before {
+    background-image: none;
+}
+
+.metaverse-banner.bg .banner-sec .btn-default {
+    color: #ffffff;
+    background: linear-gradient(241deg, rgba(86, 113, 253, 1) 15%, rgba(67, 188, 175, 1) 100%);
+    border: none;
+}
+
+.metaverse-banner.bg .banner-sec .btn-default:hover {
+    transition: background-position .6s ease-in-out, box-shadow .3s ease-in-out;
+    background-position: left 100% center;
+    background-color: #5671fd;
+    background-image: linear-gradient(90deg, rgba(67, 188, 175, 0) 0%, rgb(67, 188, 175) 100%, rgb(86, 113, 253) 100%);
+    border: none;
+}
+
+.metaverse-banner.bg {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.metaverse-banner.bg .banner-sec:before {
+    background-image: none;
+}
+
+.automotive {
+    padding: 50px 0px;
+}
+
+.automotive .auto-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 85%;
+    margin: auto;
+}
+
+.auto-area .a-img {
+    width:90%;
+    height: auto;
+    padding:20px;
+      
+}
+
+.automotive .auto-area .a-text p {
+    line-height: 26px;
+    width: 80%;
+    
+}
+
+.automotive .a-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.automotive .a-title h2 span {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.manufacturing {
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    padding: 60px 0px;
+    position: relative;
+}
+
+.manufacturing .m-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.manufacturing .m-title h2 span {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.manufacturing .manufacturing-area {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    column-gap: 20px;
+}
+
+.manufacturing .manufacturing-area .m-img {
+    width: 100%;
+}
+
+.manufacturing .manufacturing-area .m-text {
+    width: 100%;
+}
+
+.manufacturing .m-title p {
+    text-align: center;
+    width: 58%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.manufacturing .manufacturing-area .m-text p {
+    line-height: 26px;
+    width: 90%;
+}
+
+.manufacturing .manufacturing-area .m-text h3 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.benefits {
+    padding: 50px 0px;
+    position: relative;
+}
+
+.benefits .benefits-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.benefits .b-title p {
+    text-align: center;
+    width: 68%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.benefits .benefits-area .b-text p {
+    line-height: 30px;
+    width: 80%;
+}
+
+.benefits .b-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    line-height: 55px;
+}
+
+.benefits .b-title h2 span {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.curating {
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    padding: 90px 0px;
+    position: relative;
+}
+
+.curating .curating-area {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.curating .curating-area h3 {
+    font-size: 44px;
+    padding-left: 80px;
+}
+
+.curating .curating-area .c-pro {
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: right;
+    gap: 40px;
+}
+
+.curating .curating-area .c-pro .c-sec {
+    width: 25%;
+    border-right: 1px solid #fff;
+    height: 70px;
+}
+
+.curating .curating-area .c-pro .c-sec h4 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.curating .curating-area .c-pro .c-sec p {
+    color: #aeaeae;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.curating .curating-area .c-pro .c-sec.tr {
+    width: 25%;
+    border-right: none;
+    height: 68px;
+}
+
+.ready {
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    padding: 250px 0px 40px 0px;
+    position: relative;
+}
+
+.ready .r-sec {
+    background: #2196F3;
+    padding: 0px 50px;
+    border-radius: 40px;
+    width: 85%;
+    margin: auto;
+}
+
+.ready .r-sec .r-area {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    position: relative;
+}
+
+.ready .r-sec .r-area .r-left {
+    padding: 50px 0px;
+}
+
+.ready .r-sec .r-area .r-left h3 {
+    width: 80%;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+.ready .r-sec .r-area .r-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.ready .btn {
+    display: inline-block;
+    padding: 12px 40px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: auto;
+}
+
+.ready .btn-default {
+    color: #fff;
+    background: #2196F3;
+    border: 1px solid;
+}
+
+.ready .btn-default:hover {
+    color: #fff;
+    background: #22B0A1;
+    border: 1px solid;
+}
+
+.tech {
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    padding: 50px 0px;
+    position: relative;
+}
+
+.tech .t-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.tech .tech-area {
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: repeat(6, 1fr);
+    width: 85%;
+    margin: auto;
+    gap: 6px;
+}
+
+.tech .tech-area .img-class {
+    background-color: #191919;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaders {
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    padding: 50px 0px;
+}
+
+.leaders .l-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.leaders .leaders-area {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+    border-top: 1px solid #3c3b3b;
+    gap: 25px;
+    border-bottom: 1px solid #3c3b3b;
+    width: 85%;
+    margin: auto;
+}
+
+.leaders .leaders-area .img-class {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.form-sec {
+    padding: 80px 0px;
+    position: relative;
+}
+
+.form-sec .form-sec-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form-sec .form-sec-area h3 {
+    width: 75%;
+    font-size: 44px;
+    line-height: 54px;
+    padding-bottom: 20px;
+}
+
+.form-sec .form-sec-area h5 {
+    font-size: 16px;
+    color: #a3a3a3;
+}
+
+.form-sec .form-sec-area p {
+    width: 70%;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.form-sec .form-sec-area p.phone {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.form-sec .form-sec-area p.email {
+    font-size: 22px;
+}
+
+.form-sec .form-sec-area .b-form {
+    padding: 20px;
+    background: #0000003d;
+    border-radius: 10px;
+    text-align: center;
+    border: 0.5px solid #ffffff42;
+}
+
+.form-sec .form-sec-area .b-form h5 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: left;
+    color: #fff;
+}
+
+.form-sec .form-sec-area .b-form .sub .f-area {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-sec .form-sec-area .b-form .sub .form-control {
+    background-color: rgb(255 255 255 / 10%);
+    color: #fff;
+    height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.form-sec .form-sec-area .b-form .btn {
+    display: inline-block;
+    padding: 12px 40px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 28px;
+    text-decoration: none;
+}
+
+.form-sec .form-sec-area .form-control.text-area {
+    display: block;
+    width: 100%;
+    height: 110px !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #999;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-top: 2px;
+}
+
+.form-sec .form-sec-area .form-group.ct {
+    padding-bottom: 20px;
+}
+
+.form-sec .form-sec-area .form-group.msg {
+    padding-bottom: 20px;
+}
+
+.form-sec .form-sec-area .b-form .btn {
+    display: inline-block;
+    padding: 12px 40px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 28px;
+    text-decoration: none;
+}
+
+.form-sec .form-sec-area .b-form .s-button {
+    text-align: right;
+}
+
+.form-sec .form-sec-area .b-form .btn-default {
+    color: #ffffff;
+    background: linear-gradient(241deg, rgba(86, 113, 253, 1) 15%, rgba(67, 188, 175, 1) 100%);
+    border: none;
+}
+
+.insights {
+    padding: 70px 0px;
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+}
+
+.insights .i-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.insights .i-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.insights .i-button a:hover {
+    color: #2196F3;
+}
+
+.insights .i-button {
+    text-align: right;
+    display: flex;
+    gap: 5px;
+    justify-content: right;
+}
+
+.insights .insights-area {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.insights .insights-area .ins-sec {
+    display: grid;
+    grid-template-columns: 47% 50%;
+    gap: 14px;
+}
+
+.insights .insights-area .ins-sec p {
+    padding: 30px 25px 20px 0px;
+    font-size: 24px;
+    border-bottom: 1px solid #3c3b3b;
+}
+
+.insights .insights-area .ins-sec .ins-img img {
+    width: 100%;
+}
+
+.faq-new {
+    background: #000000;
+    padding: 70px 0px;
+    background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    position: relative;
+}
+
+.faq-new .f-title h2 {
+    text-align: center;
+    font-weight: 600;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    padding-bottom: 30px;
+    font-size: 44px;
+}
+
+.faq-new .ls-area .ls-left h2 {
+    font-size: 38px;
+    line-height: 50px;
+    padding-bottom: 30px;
+    color: #010224;
+}
+
+.faq-new .ls-area .ls-left p {
+    font-size: 18px;
+    line-height: 30px;
+    width: 100%;
+}
+
+.faq-new .wrapper {
+    margin: 2em auto;
+    max-width: 85%;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    background: #191919;
+    padding: 16px 18px;
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.faq-new .wrapper .accordion_wrap:first-child .accordion_header {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.faq-new .wrapper .accordion_wrap:last-child .accordion_header {
+    /* border-bottom: 2px solid transparent; */
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.faq-new .wrapper .accordion_wrap:last-child .accordion_header.active {
+    border-bottom: 1px solid transparent;
+}
+
+.faq-new .wrapper .accordion_wrap:last-child .accordion_header:hover {
+    /* border-bottom: 1px solid #ffff; */
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header:before,
+.wrapper .accordion_wrap .accordion_header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header:hover:before,
+.wrapper .accordion_wrap .accordion_header:hover:after {
+    background: #ffffff;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header:after {
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_body {
+    width: 100%;
+    height: 0px;
+    transition: all 0.5s ease;
+    background: #191919;
+    padding: 0px 18px;
+    overflow: hidden;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    background: #191919;
+    padding: 16px 18px;
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header.active+.accordion_body p {
+    margin-top: 15px;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header.active {
+    color: #fff;
+    border-color: #ffffff;
+}
+
+.faq-new .wrapper .accordion_wrap:last-child .accordion_header.active {
+    /* border-bottom: 1px solid #cccccc; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header.active:before,
+.wrapper .accordion_wrap .accordion_header.active:after {
+    background: #ffffff;
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header.active:after {
+    transform: rotate(0deg);
+}
+
+.faq-new .wrapper .accordion_wrap .accordion_header.active+.accordion_body {
+    height: auto;
+    border-top: 1px solid;
+}
+
+.insights-details-sec.bps {
+    padding-top: 60px;
+}
+
+.insights-details-sec.bps .insight-slider {
+    padding-top: 30px;
+    padding-bottom: 85px;
+    border-top: none;
+}
+
+.insights-details-sec.bps .b-title h2 {
+    text-align: center;
+    font-weight: 600;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+@media(max-width: 1024px) {
+    .metaverse-banner.bg {
+        display: block;
+        padding: 40px 0px;
+    }
+    .metaverse-banner.bg .blog-banner-area {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: flex-end;
+        gap: 80px;
+        margin-top: 80px;
+        width: 100%;
+    }
+    .metaverse-banner.bg .blog-banner-area .bb-cont {
+        text-align: center;
+    }
+    .metaverse-banner.bg .blog-banner-area h2 {
+        display: none;
+    }
+    .metaverse-banner.bg .blog-banner-area .bb-cont h2.b-txt {
+        display: block;
+    }
+    .metaverse-banner.bg .blog-banner-area .bb-cont h2.b-txt {
+        font-size: 24px;
+        color: #fff;
+        padding-bottom: 20px;
+        font-weight: 600;
+        line-height: 34px;
+        padding-right: 0;
+    }
+    .metaverse-banner.bg .blog-banner-area .bb-cont h2.b-txt span {
+        font-size: 24px;
+    }
+    .metaverse-banner.bg .blog-banner-area h2 {
+        font-size: 24px;
+        color: #fff;
+        padding-bottom: 20px;
+        font-weight: 600;
+        line-height: 34px;
+        padding-right: 0;
+    }
+    .metaverse-banner.bg .banner-sec .bb-cont .bb-pro {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 16% 75%;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+    .metaverse-banner.bg .banner-sec .bb-cont .bb-pro p {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .metaverse-banner.bg .banner-sec .bb-cont audio {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .metaverse-banner.bg-mob .banner-sec .bb-cont span {
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+    .FAQ {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 50px 0px;
+        border-bottom: 1px solid rgba(204, 204, 204, .25);
+        border-top: 1px solid rgba(204, 204, 204, .25);
+    }
+    .FAQ .accordion {
+        margin: 1em auto;
+        max-width: 100%;
+    }
+    .metaverse-banner.bg-mob .banner-sec {
+        background-image: none;
+    }
+    .metaverse-banner.bg-mob .banner-sec {
+        padding-bottom: 80px;
+    }
+    .metaverse-banner.bg-mob {
+        /* background-image: url("../../../assets/images/blogs/banner-area.png"); */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../assets/images/blogs/banner-area.png);
+        background-size: cover;
+        background-position: left;
+    }
+    .metaverse-banner.bg-mob .blog-banner-area {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: flex-end;
+    }
+    .metaverse-banner.bg-mob .blog-banner-area h4 {
+        font-size: 40px;
+        color: #fff;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        font-weight: 600;
+        line-height: 50px;
+    }
+    .metaverse-banner.bg-mob .banner-sec .bb-cont .bb-pro {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 16% 75%;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+    .metaverse-banner.bg-mob .banner-sec .bb-cont .bb-pro p {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .metaverse-banner.bg-mob .banner-sec .bb-cont audio {
+        width: 75%;
+        margin-bottom: 20px;
+    }
+    .metaverse-banner.bg-mob .banner-sec .btn-default {
+        color: #fff;
+        background: #0C264D;
+        border: none;
+    }
+    .metaverse-banner.bg-mob .banner-sec .btn {
+        display: inline-block;
+        padding: 8px 10px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        margin: auto;
+    }
+    .metaverse-banner.bg-mob .banner-sec .sm-mob {
+        margin-top: 0px;
+        display: block;
+        margin-bottom: 0px;
+    }
+    .metaverse-banner.bg-mob .sm-mob ul {
+        list-style-type: none;
+        display: flex;
+        gap: 30px;
+        padding-left: 15px;
+        justify-content: start;
+    }
+    .metaverse-banner.bg-mob .banner-sec:before {
+        content: "";
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        background-image: url("../../../assets/images/metaverse/service-2/png/bg.png");
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+    .clipboard {
+        cursor: pointer;
+        width: 35%;
+        font-size: 16px;
+        position: relative;
+        top: 0;
+        transition: all 0.2s ease;
+    }
+    .clipboard:hover {
+        top: 2px;
+    }
+    .metaverse-banner.bg-mob .banner-sec .sm-mob .clip {
+        position: absolute;
+        color: #fff;
+    }
+    .automotive {
+        padding: 30px 0px;
+    }
+    .automotive .a-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 40px;
+        line-height: 34px;
+    }
+    .automotive .auto-area {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+    .automotive .auto-area .a-text p {
+        line-height: 24px;
+        width: 100%;
+    }
+    .manufacturing {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 30px 0px;
+    }
+    .manufacturing .manufacturing-area {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: s0px;
+        width: 100%;
+    }
+    .manufacturing .manufacturing-area .m-img .mob {
+        width: 80%;
+    }
+    .manufacturing .manufacturing-area .m-img {
+        width: 100%;
+        text-align: center;
+    }
+    .manufacturing .manufacturing-area.lc {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .manufacturing .m-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 10px;
+        line-height: 34px;
+    }
+    .manufacturing .m-title p {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 30px;
+        text-align: left;
+    }
+    .manufacturing .manufacturing-area .m-text h3 {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 0px;
+        font-weight: 600;
+    }
+    .manufacturing .manufacturing-area .m-text p {
+        line-height: 24px;
+        width: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+    .benefits {
+        padding: 30px 0px;
+    }
+    .benefits .benefits-area {
+        display: flex;
+        grid-template-columns: auto;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .benefits .b-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+        line-height: 34px;
+    }
+    .benefits .b-title p {
+        text-align: left;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .benefits .benefits-area .b-text p {
+        line-height: 30px;
+        width: 100%;
+    }
+    .benefits .cw-tab-label {
+        display: grid;
+        /* justify-content: space-between; */
+        grid-template-columns: 7% 84% 3%;
+        padding: 14px 20px;
+        align-items: center;
+        background: #191919;
+        font-weight: 500;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 16px;
+    }
+    .curating {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 30px 0px;
+    }
+    .curating .curating-area {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        gap: 30px;
+    }
+    .curating .curating-area .c-pro {
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+    }
+    .curating .curating-area .c-pro .c-sec {
+        width: 35%;
+        border-right: 1px solid #fff;
+        height: 70px;
+        margin: auto;
+        text-align: center;
+        padding: 0px 20px;
+    }
+    .curating .curating-area .c-pro .c-sec.tr {
+        width: 35%;
+        border-right: none;
+        height: 68px;
+    }
+    .curating .curating-area h3 {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    .curating .curating-area .c-pro .c-sec h4 {
+        font-size: 20px;
+    }
+    .curating .curating-area .c-pro .c-sec p {
+        color: #aeaeae;
+        font-size: 15px;
+    }
+    .ready {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 30px 0px 30px 0px;
+    }
+    .ready .r-sec .r-area {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+        position: relative;
+    }
+    .ready .r-sec .r-area .r-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+    }
+    .ready .r-sec .r-area .r-left h3 {
+        width: 100%;
+        line-height: 24px;
+        padding-bottom: 10px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .tech {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 30px 0px;
+    }
+    .tech .t-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .leaders {
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+        padding: 30px 0px;
+    }
+    .leaders .l-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .form-sec {
+        padding: 40px 0px;
+    }
+    .form-sec .form-sec-area {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .form-sec .form-sec-area h3 {
+        width: 90%;
+        font-size: 24px;
+        line-height: 34px;
+        padding-bottom: 10px;
+    }
+    .form-sec .form-sec-area .b-form .sub .f-area {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .form-sec .form-sec-area p {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .form-sec .form-sec-area p.phone {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .form-sec .form-sec-area .form-group.ct {
+        padding-bottom: 10px;
+    }
+    .insights {
+        padding: 60px 0px;
+        background-image: url("../../../assets/images/metaverse/service-1/bg2.png");
+    }
+    .insights .i-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .insights .insights-area {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 22px;
+        margin-top: 30px;
+    }
+    .insights .insights-area .ins-sec {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    .insights .insights-area .ins-sec p {
+        padding: 10px 25px 10px 0px;
+        font-size: 18px;
+        border-bottom: 1px solid #3c3b3b;
+    }
+    .insights .i-button a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+    .faq-new {
+        background: #000000;
+        padding: 30px 0px;
+    }
+    .faq-new .wrapper {
+        max-width: 100%;
+        margin: 0px auto 0;
+    }
+    .faq-new .f-title h2 {
+        text-align: center;
+        font-weight: 600;
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        padding-bottom: 20px;
+        font-size: 24px;
+    }
+    .faq-new .wrapper .accordion_wrap .accordion_header {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        background: #191919;
+        padding: 16px 40px 16px 18px;
+        color: #ffffff;
+        font-weight: 500;
+        border-bottom: 1px solid #cccccc;
+        position: relative;
+        cursor: pointer;
+    }
+    .faq-new .wrapper .accordion_wrap .accordion_body p {
+        /* padding: 15px; */
+        padding: 15px 0px;
+        font-size: 15px;
+        line-height: 26px;
+        color: #fff;
+        padding-bottom: 0;
+    }
+    .faq-new .wrapper .accordion_wrap .accordion_header:before,
+    .wrapper .accordion_wrap .accordion_header:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 15px;
+        height: 2px;
+        background: #ffffff;
+    }
+}
+
+@media(min-width: 1024px) {
+    .metaverse-banner.bg-mob {
+        display: none;
+    }
+    .metaverse-banner.bg .blog-banner-area .bb-cont h2.b-txt {
+        display: none;
+    }
+}
+
+.benefits .cw-fix {
+    max-width: 700px;
+    margin: auto;
+    width: 100%;
+}
+
+/**Typeo CSS End (Note if is not need so remove)**/
+
+.benefits .cw-tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Accordion styles */
+
+.benefits .cw-tabs {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.benefits .cw-tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.cw-tab:first-child {
+    border-top: none;
+}
+
+.benefits .cw-tab-label {
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: 48px 1fr;
+    padding: 14px 20px;
+    align-items: center;
+    background: #191919;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 16px;
+    font-size: 18px;
+    position: relative;
+}
+
+label.cw-tab-label::after {
+    content: "test";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.benefits .cw-tab-label:hover {
+    background: #191919;
+}
+
+.benefits .cw-tab-label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    transition: all 0.35s;
+    background: url("../../../assets/images/metaverse/ar-vr-in-automotive-industry/Arrow.svg");
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: blink 2s ease-in infinite;
+}
+
+.benefits .cw-tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #ffffff;
+    background: #191919;
+}
+
+.benefits .cw-tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+.benefits .cw-tab-close:hover {
+    background: #1a252f;
+}
+
+.benefits .cw-tab input:checked+.cw-tab-label {
+    background: #191919;
+}
+
+.benefits .cw-tab input:checked+.cw-tab-label::after {
+    transform: rotate(-90deg);
+    animation: unset;
+}
+
+.benefits .cw-tab input:checked~.cw-tab-content {
+    max-height: 100vh;
+    padding: 5px 45px 20px 85px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: auto;
+    font-size: 16px;
+}
+
+.why-novac {
+    padding: 80px 0px;
+    position: relative;
+}
+
+.why-novac .w-title p {
+    text-align: center;
+    width: 68%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.why-novac .w-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    line-height: 55px;
+}
+
+.why-novac .why-area {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 15px;
+    justify-content: center;
+}
+
+.why-novac .why-area .why-cont {
+    padding: 20px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.why-novac .w-title h2 span {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.why-novac .why-sec {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    width: 85%;
+    margin: auto;
+}
+
+.why-novac .why-sec + .why-sec {
+    margin-top: 20px;
+}
+
+.swap a img:last-child {
+    display: none;
+}
+
+.why-novac .title {
+    font-weight: 700;
+    margin: 0;
+    font-size: 16px;
+    width: 75%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: "Manrope", sans-serif !important;
+}
+
+.swap:hover a img:first-child {
+    display: none;
+}
+
+.why-novac .description:hover {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.why-sec .icon-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background: #191919;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    width: 260px;
+    /* width: 100%; */
+    border-radius: 30px;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-sec .icon-box:hover {
+    justify-content: start;
+    align-items: flex-start;
+    padding-left: 25px;
+    padding-top: 30px;
+    width: 305px;
+}
+
+.why-sec .icon-box:hover .title {
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    font-family: "Manrope", sans-serif !important;
+    animation: fadeInUp 0.8s linear;
+}
+
+.why-novac .icon-box .desc {
+    position: relative;
+}
+
+.why-novac .icon-box .desc .description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif !important;
+    display: none;
+    animation: fadeInUp 0.8s linear;
+}
+
+.why-sec .icon-box:hover .desc .description {
+    display: block;
+}
+
+.why-sec .icon-box .swap {
+    padding-bottom: 10px;
+}
+
+.swap a img:last-child {
+    display: none
+}
+
+.swap:hover a img:first-child {
+    display: none
+}
+
+.swap:hover a img:last-child {
+    display: inline-block;
+    animation: fadeInUp 0.8s linear;
+}
+
+.resources {
+    padding: 70px 0px;
+    position: relative;
+}
+
+.resources .r-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 20px;
+    padding: 50px;
+    align-items: center;
+    background: #1919198c;
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
+
+.resources .r-area .r-img {
+    width: 100%;
+}
+
+.resources .r-area .r-cont {
+    padding: 60px;
+}
+
+.resources .r-area .r-cont h4 {
+    color: #2196F3;
+    font-size: 24px;
+}
+
+.resources .r-area .r-cont p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.resources .r-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #ffff;
+    margin: auto;
+    padding-bottom: 50px;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.resources .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #6c6c6c;
+}
+
+.resources .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #161616;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #0182e8;
+}
+
+.resources .r-area .r-cont a {
+    text-decoration: none;
+}
+
+.resources .owl-theme .owl-nav {
+    margin-top: 45px;
+}
+
+.resources .owl-theme .owl-nav [class*=owl-]:hover {
+    background: #2196f3;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.resources .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.testimonial-c {
+    padding: 70px 0px;
+    position: relative;
+}
+
+.testimonial-c .tm-title h2 {
+    font-size: 44px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #ffff;
+    margin: auto;
+    padding-bottom: 50px;
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.testimonial-c .tm-area {
+    display: grid;
+    grid-template-columns: 100%;
+    border-radius: 20px;
+    padding: 0px;
+    align-items: center;
+    background: #191919;
+    position: relative;
+    width: 75%;
+    margin: auto;
+}
+
+.testimonial-c .tm-area .t-cont {
+    text-align: center;
+    padding: 30px;
+}
+
+.testimonial-c .tm-area .t-cont h4 {
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.testimonial-c .tm-area .t-cont p {
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.testimonial-c .tm-area .t-cont span {
+    color: #7a7a7a;
+    font-size: 16px;
+}
+
+.testimonial-c .shd-resources-c {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    z-index: -1;
+    top: 0;
+}
+
+.home-contact-sec .row.center {
+    width: 90%;
+    margin: auto;
+}
+
+@media(max-width: 767px) {
+    .container-mob {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .metaverse-banner.bg .banner-sec {
+        padding-bottom: 40px;
+        background-image: none;
+        padding-top: 0;
+    }
+    .shd-banner-t {
+        display: none;
+    }
+    .shd-banner-r {
+        display: none;
+    }
+    .manufacturing .shd-manufacturing-l {
+        display: none;
+    }
+    .manufacturing .shd-manufacturing-r {
+        display: none;
+    }
+    .benefits .shd-benefits-l {
+        display: none;
+    }
+    .why-novac .shd-why-novac-l {
+        display: none;
+    }
+    .curating .shd-curating-l {
+        display: none;
+    }
+    .curating .shd-curating-c {
+        display: none;
+    }
+    .curating .shd-curating-r {
+        display: none;
+    }
+    .ready .shd-ready-c {
+        display: none;
+    }
+    .tech .shd-tech-r {
+        display: none;
+    }
+    .form-sec .shd-form-c {
+        display: none;
+    }
+    .testimonial .shd-testimonial-c {
+        display: none;
+    }
+    .resources .shd-resources-c {
+        display: none;
+    }
+    .faq-new .shd-faq-l {
+        display: none;
+    }
+    .ready .r-sec {
+        background: #2196F3;
+        padding: 0px 15px;
+        border-radius: 30px;
+        width: 100%;
+    }
+    .ready .r-sec .r-area .r-left h3 {
+        width: 100%;
+        line-height: 24px;
+        padding-bottom: 6px;
+        font-size: 16px;
+    }
+    .ready .btn {
+        padding: 6px 20px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .ready .r-sec .r-area .r-left {
+        padding: 15px 0px;
+        text-align: left;
+        z-index: 1;
+    }
+    .ready .r-sec .r-area .r-right img {
+        width: 30%;
+    }
+    .why-novac {
+        padding: 40px 0px;
+        position: relative;
+    }
+    .why-novac .why-sec {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    .why-novac .w-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+        line-height: 34px;
+    }
+    .why-novac .w-title p {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 40px;
+    }
+    .resources {
+        padding: 30px 0px;
+        position: relative;
+    }
+    .resources .r-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .resources .r-area {
+        display: grid;
+        grid-template-columns: auto;
+        border-radius: 20px;
+        padding: 20px;
+        align-items: center;
+        background: #191919;
+        width: 100%;
+    }
+    .resources .r-area .r-cont {
+        padding: 30px 0px;
+    }
+    .resources .r-area .r-cont h4 {
+        color: #2196F3;
+        font-size: 20px;
+    }
+    .resources .r-area .r-cont p {
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .benefits .cw-tab-label {
+        display: grid;
+        /* justify-content: space-between; */
+        grid-template-columns: 15% 75% 3%;
+        padding: 14px 20px;
+        align-items: center;
+        background: #191919;
+        font-weight: 500;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 14px;
+    }
+    .benefits .cw-tab input:checked~.cw-tab-content {
+        max-height: 100vh;
+        padding: 5px 20px 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        font-size: 13px;
+    }
+    .tech .tech-area {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 12px;
+    }
+    .tech .tech-area .img-class {
+        background-color: #191919;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        height: 100px;
+    }
+    .leaders .leaders-area {
+        border-top: 1px solid #3c3b3b;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 12px;
+        border-bottom: 1px solid #3c3b3b;
+    }
+    .leaders .leaders-area .img-class {
+        padding: 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    .why-novac .w-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+        line-height: 34px;
+    }
+    .why-novac .why-sec {
+        display: grid;
+        grid-template-columns: 45% 48%;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 10px;
+    }
+    .why-sec .icon-box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 15px;
+        background: #191919;
+        justify-content: center;
+        align-items: center;
+        height: 390px;
+        width: 80%;
+        /* width: 100%; */
+        border-radius: 30px;
+        z-index: 3;
+        position: relative;
+    }
+    .why-sec .icon-box:hover {
+        justify-content: start;
+        align-items: flex-start;
+        padding-left: 25px;
+        padding-top: 30px;
+        width: 100%;
+    }
+    .curating .curating-area .c-pro {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        margin: auto;
+    }
+    .ready .r-sec .r-area .r-right img {
+        width: 35%;
+    }
+    .ready .btn {
+        display: inline-block;
+        padding: 6px 30px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: auto;
+    }
+    .ready .r-sec .r-area .r-left h3 {
+        width: 100%;
+        line-height: 28px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .testimonial-c .tm-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .testimonial-c .tm-area .t-cont h4 {
+        color: #ffffff;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    .testimonial-c .tm-area .t-cont span {
+        color: #7a7a7a;
+        font-size: 14px;
+    }
+    .resources .r-area .r-cont {
+        padding: 30px;
+    }
+    .resources .r-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 50px;
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+    .resources .r-area .r-cont h4 {
+        color: #2196F3;
+        font-size: 20px;
+    }
+    .resources .r-area .r-cont p {
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .resources .r-area {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-radius: 20px;
+        padding: 50px;
+        align-items: center;
+        background: #1919198c;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1199px) {
+    .metaverse-banner.bg .blog-banner-area .bb-cont h2.b-txt {
+        display: none;
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1399px) {
+    .curating .curating-area h3 {
+        font-size: 36px;
+        padding-left: 80px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.blink {
+    animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #5671fd !important;
+}
+
+.home-contact-sec .contact-content-wrap .contact-header .h4 {
+    background: #5671fd;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+@media(min-width: 768px) {
+    .tech-stack-mob {
+        display: none;
+    }
+    .leaders-mob {
+        display: none;
+    }
+    .why-novac-mob {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .tech {
+        display: none;
+    }
+    .leaders {
+        display: none;
+    }
+    .why-novac {
+        display: none;
+    }
+    .why-novac-mob {
+        display: block;
+    }
+    .tech-stack-mob {
+        padding: 30px 0px;
+    }
+    .tech-stack-mob .ts-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 30px;
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+    .tech-stack-mob .item .img-class {
+        background-color: #191919;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px 6px;
+        height: 100px;
+    }
+    .testimonial-c {
+        padding: 30px 0px;
+        position: relative;
+    }
+    .testimonial-c .tm-area .t-cont {
+        text-align: center;
+        padding: 20px;
+    }
+    .testimonial-c .tm-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .testimonial-c .shd-resources-c {
+        display: none;
+    }
+    .testimonial-c .tm-area {
+        display: grid;
+        grid-template-columns: 100%;
+        border-radius: 20px;
+        padding: 0px;
+        align-items: center;
+        background: #191919;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+    .testimonial-c .tm-area .t-cont h4 {
+        color: #ffffff;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .testimonial-c .tm-area .t-cont span {
+        color: #7a7a7a;
+        font-size: 14px;
+    }
+    .testimonial-c .tm-area .t-cont p {
+        color: #ffffff;
+        font-size: 14px;
+        padding-top: 20px;
+    }
+    .leaders-mob {
+        padding: 30px 0px;
+    }
+    .leaders-mob .ld-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        color: #ffff;
+        margin: auto;
+        padding-bottom: 15px;
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+    .leaders-mob .item .img-class {
+        padding: 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .leaders-mob .owl-carousel .owl-item img {
+        width: 70%;
+    }
+    .benefits .cw-tab-label::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        transition: all 0.35s;
+        background: url("../../../assets/images/metaverse/ar-vr-in-automotive-industry/Arrow.svg");
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: blink 2s ease-in infinite;
+    }
+    label.cw-tab-label::after {
+        content: "test";
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 30px;
+    }
+    .why-novac-mob {
+        padding: 30px 0px;
+        position: relative;
+    }
+    .why-novac-mob .w-title p {
+        text-align: left;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 40px;
+    }
+    .why-novac-mob .w-title h2 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+        line-height: 34px;
+    }
+    .why-novac-mob .w-title h2 span {
+        background: #5671fd;
+        background: linear-gradient(90deg, #5671FD, #22B0A1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+    .why-novac-mob .why-mob-area {
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .why-novac-mob .cw-tab-label {
+        position: relative;
+    }
+    .why-novac-mob .cw-fix {
+        max-width: 700px;
+        margin: auto;
+        width: 100%;
+    }
+    /**Typeo CSS End (Note if is not need so remove)**/
+    .why-novac-mob .cw-tab input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    /* Accordion styles */
+    .why-novac-mob .cw-tabs {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .why-novac-mob .cw-tab {
+        width: 100%;
+        color: white;
+        overflow: hidden;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    .cw-tab:first-child {
+        border-top: none;
+    }
+    .why-novac-mob label.cw-tab-label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 20px;
+    }
+    .why-novac-mob .cw-tab-label:hover {
+        background: #191919;
+    }
+    .why-novac-mob .cw-tab-label::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        transition: all 0.35s;
+        background: url("../../../assets/images/metaverse/ar-vr-in-automotive-industry/Arrow.svg");
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: blink 2s ease-in infinite;
+    }
+    .why-novac-mob .cw-tab-content {
+        max-height: 0;
+        padding: 0 1em;
+        color: #ffffff;
+        background: #191919;
+    }
+    .why-novac-mob .cw-tab-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        font-size: 0.75em;
+        background: #2c3e50;
+        cursor: pointer;
+    }
+    .why-novac-mob .cw-tab-close:hover {
+        background: #1a252f;
+    }
+    .why-novac-mob .cw-tab input:checked+.cw-tab-label {
+        background: #191919;
+    }
+    .why-novac-mob .cw-tab input:checked+.cw-tab-label::after {
+        transform: rotate(-90deg);
+        animation: unset;
+    }
+    .why-novac-mob .cw-tab input:checked~.cw-tab-content {
+        max-height: 100vh;
+        padding: 5px 45px 20px 85px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin: auto;
+        font-size: 16px;
+    }
+    .why-novac-mob .cw-tab-label {
+        display: grid;
+        /* justify-content: space-between; */
+        grid-template-columns: 15% 75% 3%;
+        padding: 14px 20px;
+        align-items: center;
+        background: #191919;
+        font-weight: 500;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 14px;
+    }
+    .why-novac-mob .cw-tab input:checked~.cw-tab-content {
+        max-height: 100vh;
+        padding: 5px 20px 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        font-size: 13px;
+    }
+    .home-contact-sec {
+        padding-top: 100px;
+    }
+    .common-sec {
+        padding-top: 25px;
+        padding-bottom: 60px;
+    }
+    .home-contact-sec .contact-content-wrap .contact-header .h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+    .home-contact-sec .row.center {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .home-contact-sec {
+        padding-top: 100px;
+    }
+}

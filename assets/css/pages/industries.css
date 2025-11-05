@@ -1,0 +1,115 @@
+/* Industries section styles */
+.industries-section {
+    padding: 70px 0;
+    color: #fff;
+    background: transparent;
+}
+
+.industries-section .container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.industries-section h2 {
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #5671FD, #22B0A1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.industries-section .subtitle {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.industries-section .content-block {
+    margin-bottom: 30px;
+}
+
+.industries-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.industries-section h3 {
+    font-size: 22px;
+    color: #fff;
+    margin: 30px 0 20px;
+}
+
+.industries-section .video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.industries-section .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+.industries-section .video-caption {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.industries-section .areas-list {
+    margin: 20px 0;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.industries-section .areas-list li {
+    color: #e6e6e6;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.industries-section .areas-list li::marker {
+    color: #5671FD;
+}
+
+.industries-section .stats-block p {
+    margin-bottom: 15px;
+}
+
+.industries-section strong {
+    color: #5671FD;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .industries-section .container {
+        width: 90%;
+    }
+
+    .industries-section h2 {
+        font-size: 28px;
+    }
+
+    .industries-section .subtitle {
+        font-size: 20px;
+    }
+
+    .industries-section .simulator-block,
+    .industries-section .stats-block {
+        padding: 20px;
+    }
+
+    .industries-section .areas-list {
+        grid-template-columns: 1fr;
+    }
+}

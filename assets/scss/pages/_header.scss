@@ -1,0 +1,55 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    padding-top: size(15);
+    padding-bottom: size(15);
+    z-index: 1049;
+    transition: background-color 0.3s ease-in-out!important;
+    transform: translateY(-100%);
+    animation: headeranimation 0.6s ease-in-out 0.5s forwards;
+    li{
+        a{
+            color: white;
+            &:focus,
+            &:focus-visible,
+            &:active{
+                outline: none!important;
+            }
+        }
+    }
+    &.scroll-header{
+        // background-color: #070708;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        // background-color: rgb(59 59 66/20%);
+        background-color: rgb(0,0,0);
+
+        
+        @media not all and (min-resolution:.001dpcm)
+        { @supports (-webkit-appearance:none) {
+            background-color: rgb(10 10 10);
+           
+        }}
+
+    }
+    .logo{
+        @include max(575.9){
+            max-width: 140px;
+        }
+    }
+
+
+    
+}
+
+@keyframes headeranimation{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

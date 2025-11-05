@@ -1,0 +1,240 @@
+/*  ===============
+  1. Reset
+===============  */
+
+html {
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+	@include min(1600) {
+		font-size: 18px;
+	}
+}
+
+body {
+	padding-top: size(80);
+}
+
+img {
+	max-width: 100%;
+}
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
+.form-control,
+input,
+button {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+select.default {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: $white url('../images/carret.png') no-repeat 96% 50%;
+	outline: none;
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+
+.admin-content-area {
+
+	/* =====     Unordered List Items     ===== */
+	ul,
+	ol,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	p {
+
+		&+h1,
+		&+h2,
+		&+h3,
+		&+h4,
+		&+h5,
+		&+h6,
+		&+ul,
+		&+ol {
+			margin-top: 24px;
+		}
+	}
+
+	ul {
+		display: block;
+		margin: 24px 0 10px;
+		padding-left: 20px;
+
+		li {
+			display: block;
+			line-height: 1.4;
+			padding-left: 22px;
+			position: relative;
+
+			&+li {
+				margin-top: 10px;
+			}
+
+			&:before {
+				background-color: $primary;
+				border: none;
+				@include border-radius(50%);
+				content: '';
+				display: block;
+				height: 10px;
+				left: 0;
+				position: absolute;
+				top: 6px;
+				width: 10px;
+			}
+
+			@include max(1199) {
+				padding-left: 20px;
+
+				&+li {
+					margin-top: 10px;
+				}
+
+				&:before {
+					height: 8px;
+					width: 8px;
+				}
+			}
+
+			@include max(767) {
+				padding-left: 15px;
+
+				&:before {
+					height: 7px;
+					width: 7px;
+				}
+			}
+		}
+
+		&.white {
+			li {
+				&:before {
+					border-color: $white;
+				}
+			}
+		}
+	}
+
+	/* =====     Ordered List Items     ===== */
+	ol {
+		margin: 24px 0 10px;
+		counter-reset: item;
+
+		li {
+			display: block;
+			line-height: 1.4;
+			padding-left: 20px;
+			position: relative;
+
+			&+li {
+				margin-top: 15px;
+			}
+
+			&:before {
+				content: counters(item, ".") ".";
+				counter-increment: item;
+				display: inline-block;
+				left: 0;
+				position: absolute;
+			}
+		}
+
+		&.lower-alpha {
+			li {
+				&:before {
+					content: counters(item, "", lower-alpha)")";
+				}
+			}
+		}
+
+		&.lower-roman {
+			li {
+				&:before {
+					content: counters(item, "", lower-roman)")";
+				}
+			}
+		}
+
+		&.roman-sub {
+			li {
+				padding-left: 30px;
+
+				&:before {
+					content: counters(item, ".", upper-roman)".";
+					counter-increment: item;
+					font-weight: 500;
+				}
+
+				ol {
+					li {
+						padding-left: 32px;
+					}
+				}
+			}
+		}
+
+		&.decimal-sub {
+			li {
+				padding-left: 30px;
+
+				&:before {
+					content: counters(item, ". ", decimal)".";
+					counter-increment: item;
+					font-weight: 500;
+				}
+
+				ol {
+					padding-top: 5px;
+
+					li {
+						padding-left: 32px;
+					}
+
+					ol {
+						li {
+							padding-left: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ul,
+	ol {
+
+		&+h2,
+		&+h3,
+		&+h4,
+		&+h5,
+		&+h6 {
+			margin-top: 30px;
+		}
+
+		&+p {
+			margin-top: 20px !important;
+		}
+	}
+}

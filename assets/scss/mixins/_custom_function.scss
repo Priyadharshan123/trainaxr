@@ -1,0 +1,174 @@
+@mixin  primarygradient($deg:0deg) {
+    background: $primary;
+    background: linear-gradient($deg, $secondary, $primary);
+    background: -moz-linear-gradient($deg, $secondary, $primary);
+    background: -webkit-linear-gradient($deg, $secondary, $primary);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EF566A", endColorstr="#627AF7", GradientType=1 );
+}
+@mixin link-hover($val1: white,$val2: $secondary) {
+  color: $val1;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    color: $val2;
+  }
+}
+
+@function res($val){
+  @return #{$val}px;
+}
+
+
+
+
+
+
+@function px($val){
+  @return #{$val}px;
+}
+
+@mixin imgwrap($w,$h){
+  $val: calc( 10000 / $w * $h);
+  $val1: floor($val);
+  $val2: calc($val1 / 100);
+  position: relative;
+  img{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+  }
+  &:before{
+      content: "";
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-bottom: ($val2 * 1%);
+      pointer-events: none;
+  }
+}
+@mixin  imagehover($val: 1.05) {
+  overflow: hidden;
+  img{
+    transform: scale(1.0001);
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+  }
+  &:hover{
+    img{
+      transform: scale($val);
+    }
+  }
+}
+
+
+
+
+
+
+
+@mixin resfonts($val1,$val2){
+  .fz#{$val1}-#{$val2}{ font-size: var(--r#{$val1}-#{$val2}); }
+}
+
+
+
+
+@function line($fontSize,$lineHeight) {
+  $val1: $lineHeight * 100;
+  $abc: calc($val1/$fontSize);
+  $abc2: floor($abc);
+  $abc3: calc($abc2/100);
+  @return #{$abc3}em;
+}
+@function maxval($val,$val2){
+  @return max($val,$val2);
+}
+
+@mixin responsive($large,$small){
+  :root{
+      $val: ($large - $small) / 4;
+      @include min(1200){
+          --r#{$large}-#{$small}: #{$large}px;
+      }
+      @include min-max(992,1199.9){
+          --r#{$large}-#{$small}: #{$small + ($val * 3)}px;
+      }
+      @include min-max(768,991.9){
+          --r#{$large}-#{$small}: #{$small + ($val * 2)}px;
+      }
+      @include min-max(576,767.9){
+          --r#{$large}-#{$small}: #{$small + ($val)}px;
+      }
+      @include max(575.9){
+          --r#{$large}-#{$small}: #{$small}px;
+          
+      }
+
+  }
+}
+
+$rsize: 0;
+
+// $valvw: 0.052 * $item;
+
+@function rsize($val){
+  $valvw: 0.052 * $val;
+  @return #{$valvw}vw;
+}
+
+@mixin  icomoon() {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+
+@function radialgradient($val,$val2: rgba($val,0)){
+  @return radial-gradient(circle, $val 0%, $val2 66%);
+}
+
+@mixin btn-hover(){
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin div-to-link(){
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  &:hover{
+    color: $primary;
+  }
+}
+
+@mixin before($val: ""){
+  &:before{
+    content: $val;
+    display: block;
+    @content;
+  }
+}
+
+@function vw($val){
+  $step1: $val * 0.05208333;
+  $step2: $step1 * 1000;
+  $step3: floor($step2);
+  $step4: $step3 * 0.001;
+  @return #{$step4}vw;
+}
+
+
+
+$responsives:(
+  10 5,
+); 
+
+

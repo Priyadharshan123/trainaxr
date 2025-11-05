@@ -1,0 +1,314 @@
+.blog-card .img-wrap {
+    padding-top: calc((198 / 438) * 100%);
+    position: relative;
+    margin-bottom: var(--res27-20);
+    overflow: hidden
+}
+
+.blog-card .img-wrap img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0
+}
+
+.blog-card .img-wrap img {
+    transform: scale(1.0001);
+    transition: transform .6s ease-in-out;
+    will-change: transform
+}
+
+.blog-card .img-wrap:hover img {
+    transform: scale(1.05)
+}
+
+.blog-card .card-types {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: var(--res20-5)
+}
+
+@media (max-width:575.9px) {
+    .blog-card .card-types {
+        color: #959595;
+        font-weight: 600
+    }
+}
+
+.blog-card .blog-date {
+    color: #959595;
+    font-weight: 500;
+    margin-top: var(--res30-15)
+}
+
+.blog-card {
+    text-decoration: none;
+    transition: all ease .5s
+}
+
+.blog-card h5,
+.blog-card p {
+    color: #fff
+}
+
+.blog-card:hover {
+    opacity: .9
+}
+
+@media (min-width:1200px) {
+    .insights-details-main-sec {
+        padding-bottom: 65px
+    }
+}
+
+@media (min-width:992px) {
+    .insights-details-main-sec .container {
+        max-width: 930px
+    }
+}
+
+.insights-details-main-sec .h4 {
+    margin-bottom: 40px
+}
+
+@media (max-width:1199.9px) {
+    .insights-details-main-sec .h4 {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width:767.9px) {
+    .insights-details-main-sec .h4 {
+        margin-bottom: 20px
+    }
+}
+
+.insights-details-main-sec p {
+    margin-bottom: 40px
+}
+
+@media (max-width:1199.9px) {
+    .insights-details-main-sec p {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width:767.9px) {
+    .insights-details-main-sec p {
+        margin-bottom: 20px
+    }
+}
+
+.insights-details-main-sec p:nth-last-of-type(1) {
+    margin-bottom: 0
+}
+
+.insights-details-main-sec .img-wrap {
+    padding-top: calc((394 / 898) * 100%);
+    position: relative
+}
+
+.insights-details-main-sec .img-wrap img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0
+}
+
+.insights-details-main-sec .insights-details-main-content {
+    font-size: 16px;
+    line-height: 33px
+}
+
+@media (max-width:767.9px) {
+    .insights-details-main-sec .insights-details-main-content {
+        line-height: 26px
+    }
+}
+
+.insights-details-main-sec .insights-details-main-img-wrap {
+    padding-bottom: 60px
+}
+
+@media (max-width:1199.9px) {
+    .insights-details-main-sec .insights-details-main-img-wrap {
+        padding-bottom: 45px
+    }
+}
+
+@media (max-width:767.9px) {
+    .insights-details-main-sec .insights-details-main-img-wrap {
+        padding-bottom: 30px
+    }
+}
+
+@media (max-width:575.9px) {
+    .insights-details-main-sec .insights-details-main-img-wrap {
+        margin-left: -20px;
+        margin-right: -20px
+    }
+}
+
+.insights-details-main-sec .blog-footer {
+    padding-top: 52px
+}
+
+@media (max-width:1199.9px) {
+    .insights-details-main-sec .blog-footer {
+        padding-top: 35px
+    }
+}
+
+@media (max-width:767.9px) {
+    .insights-details-main-sec .blog-footer {
+        padding-top: 29px
+    }
+}
+
+.insight-slider {
+    padding-top: 80px;
+    padding-bottom: 85px;
+    border-top: 1px solid rgba(204, 204, 204, .25)
+}
+
+@media (max-width:1199.9px) {
+    .insight-slider {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .insight-slider .swiper-slide {
+        max-width: 336px;
+        width: 100%
+    }
+}
+
+@media (max-width:991.9px) {
+    .insight-slider {
+        padding-top: 60px;
+        padding-bottom: 60px
+    }
+}
+
+@media (max-width:767.9px) {
+    .insight-slider {
+        padding-top: 45px;
+        padding-bottom: 45px
+    }
+}
+
+@media (max-width:575.9px) {
+    .insight-slider {
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+}
+
+.insignt-slider-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 45px
+}
+
+.insignt-slider-nav .insight-swiper-button-next,
+.insignt-slider-nav .insight-swiper-button-prev {
+    transition: opacity .3s ease-in-out
+}
+
+.insignt-slider-nav .insight-swiper-button-next span,
+.insignt-slider-nav .insight-swiper-button-prev span {
+    font-size: .8em
+}
+
+.insignt-slider-nav .insight-swiper-button-next.swiper-button-disabled,
+.insignt-slider-nav .insight-swiper-button-prev.swiper-button-disabled {
+    pointer-events: none;
+    opacity: .45
+}
+
+.insignt-slider-nav .insight-swiper-button-next span {
+    padding-left: 12px
+}
+
+.insignt-slider-nav .insight-swiper-button-prev span {
+    padding-right: 12px
+}
+
+@media (min-width:768px) {
+    .insight-linking {
+        display: flex;
+        justify-content: flex-end
+    }
+}
+
+.insight-linking ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.insight-linking ul li {
+    display: inline-block;
+    margin-left: 35px
+}
+
+@media (max-width:767.9px) {
+    .insight-linking ul li {
+        padding-top: 21px;
+        margin-left: 0;
+        margin-right: 25px
+    }
+}
+
+.insight-linking ul li span {
+    text-decoration: none;
+    color: #000;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 16px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out
+}
+
+.insight-linking ul li span:hover {
+    background-color: #fff
+}
+
+.insight-linking ul li a .icon-twitter {
+    position: relative;
+    top: 1px;
+    left: 2px
+}
+
+@media (min-width:1200px) {
+    .insights-details-sec {
+        padding-top: 65px
+    }
+}
+
+.insights-details-main-sec .h4 {
+    margin-bottom: 20px
+}
+
+.insights-details-main-sec p.text-1 {
+    margin-bottom: 0;
+    color: #fff
+}
+
+.insights-details-main-sec p.text-2 {
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.insights-details-main-sec .insights-details-main-content a {
+    text-decoration: none;
+    color: #1468fb
+}

@@ -1,0 +1,21 @@
+[data-anim*="fadein-top"] {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: 0.5s all;
+
+    &.visible {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+[data-anim="fade-in"] {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.5s all;
+
+    &.visible {
+        transform: translate(0);
+        opacity: 1;
+    }
+}

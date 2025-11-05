@@ -1,0 +1,655 @@
+
+
+
+body{
+  background-color: #000000;
+  color: $white;
+  scrollbar-width: thin;
+  font-family: 'Manrope', sans-serif!important;
+}
+
+.default {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+
+  li {
+    list-style-type: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@mixin  default-button() {
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: size(16);
+  border: none;
+  &:active:focus,
+  &:focus,
+  &:active{
+    color: white;
+    box-shadow: none;
+  }
+}
+
+.btn-primary{
+  // @include primarygradient();
+  background-size: 200%;
+  color: white;
+  background-position: center left;
+  padding: 13px 27px;
+  transition: background-position 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-position: left 100% center;
+  background-image: linear-gradient(90deg, rgba(67,188,175,0) 0%, rgba(67,188,175,1) 50%, rgba(86,113,253,1) 100%);
+  &:hover{
+    background-position: left 0% center;
+    color: white;
+  }
+  @include default-button();
+  @include max(575.9){
+    padding: 12px 27px;
+  }
+}
+.btn-secondary{
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 1px white;
+  color: white;
+  padding: 13px 27px;
+  background-image: linear-gradient(90deg, rgba(67,188,175,0) 0%, rgba(67,188,175,0) 37%, rgba(67,188,175,1) 64%, rgba(67,188,175,1) 100%);
+  background-size: 300% 100%;
+  background-position: left 0% center;
+  @include default-button();
+  transition: background-position 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+  &:hover{
+    color: white;
+    box-shadow: inset 0 0 0 1px $secondary, inset 0 0 0 1px $secondary;
+    background-color: transparent!important;
+    background-position: left 100% center;
+  }
+  @include max(575.9){
+    padding: 12px 27px;
+  }
+}
+
+.know-more-btn{
+  color: white;
+  text-decoration: none;
+  line-height: size(30);
+  font-size: var(--res20-16);
+  font-weight: 400;
+  @include link-hover(white,$secondary);
+  span{
+    font-size: 0.6em;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg) translateY(0%);
+    display: inline-block;
+    will-change: transform;
+  }
+  &:hover{
+    span{
+      transform: rotate(39deg) translateY(-45%);
+    }
+  }
+}
+.link-btn{
+  span{
+    font-size: 0.6em;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg) translateY(0%);
+    will-change: transform;
+  }
+  &:hover{
+    span{
+      transform: rotate(39deg) translateY(-45%);
+    }
+  }
+}
+
+
+
+@function rzz($val){
+  @return var(--rz#{$val});
+}
+
+
+@mixin titlefont($val,$val3,$val2:500){
+  font-size: rzz($val);
+  font-weight: $val2;
+  line-height: line($val,$val3);
+  font-family: "Manrope";
+}
+.h1{
+  @include titlefont(75,87,400);
+}
+.h2{
+  @include titlefont(65,77);
+}
+.h3{
+  @include titlefont(55,68);
+}
+.h4{
+  @include titlefont(40,51);
+}
+
+
+
+
+
+$paragraph-font-sizes: (
+    
+    15: size(15),
+    17: size(17),
+    19: size(19),
+    21: size(21),
+    23: size(23),
+    24: size(24),
+    25: size(25),
+    26: size(26),
+    35: size(35),
+    45: size(45),
+);
+
+$var-fonts: (
+  14: 14px,
+  16: var(--res16-14),
+  18: var(--res18-14),
+  20: var(--res20-16),
+  22: var(--res22-16),
+  26: var(--res26-20),
+);
+
+$sm-font-sizes: (
+  18: 18px,
+  20: 20px,
+);
+
+
+@each $paragraph,$font-size in $var-fonts {
+  .fz-#{$paragraph} {
+    font-size: $font-size;
+  }
+}
+
+@each $paragraph,$font-size in $paragraph-font-sizes {
+      .fz-#{$paragraph} {
+        font-size: $font-size;
+      }
+}
+
+
+@include max(575.9){
+  @each $paragraph,$font-size in $sm-font-sizes {
+      .fz-sm-#{$paragraph} {
+        font-size: $font-size;
+      }
+  }
+}
+
+
+
+$fontweights: (
+  light: 200,
+  thin: 300,
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700
+);
+
+@each $fontweight,$fontweightval in $fontweights {
+  .fw-#{$fontweightval},
+  .fw-#{$fontweight} {
+    font-weight: $fontweightval;
+  }
+}
+
+.common-sec{
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include min-max(1200,1599.9){
+    padding-top: 79px;
+    padding-bottom: 74px;
+  }
+  @include min-max(992,1199.9){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include min-max(768,991.9){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include min-max(576,767.9){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include max(575.9){
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.line-30{
+  line-height: 30px;
+}
+.line-33{
+  line-height: 33px;
+}
+.line-36{
+  line-height: 36px;
+}
+
+
+
+
+
+.fz-18.line-30{
+  line-height: line(18,30);
+}
+.fz-18.line-33{
+  line-height: line(18,33);
+}
+.fz-20.line-33{
+  line-height: line(20,33);
+}
+.h4.line-33,
+.fz-22.line-33{
+  line-height: line(22,33);
+}
+.fz-22.line-36{
+  line-height: line(22,36);
+}
+.fz-26.line-36{
+  line-height: line(26,36);
+}
+
+
+.form-control:not([type="radio"]):not([type="checkbox"]){
+  background-color: #212121;
+  border-color: #212121;
+  border-radius: 28px;
+  @extend .fz-14;
+  font-weight: 500;
+  padding: 14px 28px;
+  margin-bottom: 7px;
+  color: white;
+  transition: all 0.3s ease-in;
+  &:focus,
+  &:active{
+    outline: none;
+    box-shadow: none;
+    border-color: rgba(255,255,255,0.2);
+  }
+  @include min(1600){
+    padding: 16px 28px;
+  }
+}
+textarea.form-control{
+  border-radius: 10px!important;
+}
+
+select.form-control{
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11.838' height='7.333' viewBox='0 0 11.838 7.333'%3e%3cpath id='Path_34753' data-name='Path 34753' d='M16,16.423l5.212-5.212L16,6' transform='translate(17.13 -15.293) rotate(90)' fill='none' stroke='%23959595' stroke-width='2'/%3e%3c/svg%3e ");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  padding-right: 36px!important;
+  color: white;
+}
+textarea.form-control{
+  resize: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+// .cursor {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 100%;
+//   border: 1px solid black;
+//   transition: all 200ms ease-out;
+//   position: fixed;
+//   pointer-events: none;
+//   left: 0;
+//   top: 0;
+//   transform: translate(calc(-50% + 15px), -50%);
+// }
+
+// .cursor2 {
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 100%;
+//   background-color: black;
+//   opacity: .3;
+//   position: fixed;
+//   transform: translate(-50%, -50%);
+//   pointer-events: none;
+//   transition: width .3s, height .3s, opacity .3s;
+// }
+
+// .hover {
+//   background-color: red;
+//   opacity: 0.5;
+// }
+
+// .cursorinnerhover {
+//   width: 50px;
+//   height: 50px;
+//   opacity: .5;
+// }
+footer{
+  z-index: 20;
+  position: relative;
+}
+main{
+  z-index: 10;
+  position: relative;
+}
+// .cursor {
+//   width: 1px;
+//   height: 1px;
+//   background: #fff;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   transform: translateX(-50%) translateY(-50%);
+//   mix-blend-mode: difference;
+//   z-index: 30;
+// }
+.custom-cursor{
+  @include min(1200){
+    cursor: none;
+    .accordion-header,
+    button{
+      cursor: none!important;
+    }
+  }
+}
+
+@include min(1200){
+  // .cursor {
+  //   width: 0px;
+  //   height: 0px;
+  //   background: rgba(255,255,255,0);
+  //   border-radius: 100%;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   transform: translateX(0px) translateY(0px);
+  //   mix-blend-mode: difference;
+  //   // filter: blur(20px);
+  //   z-index: 100;
+  //   box-shadow: 0 0 43px 10px white;
+  //   pointer-events: none;
+   
+    
+  // }
+  .cursor2{
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: fixed;
+    color: rgba(0,0,0,0);
+    font-size: 0em;
+    transition: width 0.3s ease-in-out,  height 0.3s ease-in-out,  color 0.3s ease-in-out,  background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition-delay: color 0.2s;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+    font-weight: 500;
+    &.custom-cursor-active{
+      transition-delay: color 0s;
+      box-shadow: none;
+      background-color: white;
+      width: 120px;
+      height: 120px;
+      mix-blend-mode: normal;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(0,0,0,1);
+    }
+  }
+
+  .img-wrap.custom-cursor.show-video{
+    .video-wrap{
+      cursor: pointer!important;
+    }
+  }
+
+}
+
+
+
+
+.op-07{
+  opacity: 0.7;
+}
+
+.gradient-text,
+.title-gradient span{
+  @include primarygradient(180deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0,0,0,0);
+}
+.fz-26-16{
+
+}
+
+
+
+$responsivee:(
+  16 14,
+  18 14,
+  18 16,
+  20 16,
+  22 16,
+  26 16,
+  26 20,
+  27 20,
+  30 15,
+  30 22,
+  45 30,
+  45 40,
+  56 6,
+  60 40,
+  90 40,
+  100 40
+); 
+
+
+@each $resp in $responsivee{
+  $large: nth($resp,1);
+  $small: nth($resp,2);
+  @include resfonts($large,$small)
+}
+
+@include min(1200){
+  @each $resp in $responsivee{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    :root{
+      $val: calc(($large - $small )/ 4);
+      // $val: ($large - $small) / 4;
+        --res#{$large}-#{$small}: #{$large}px;
+    }
+  }
+}
+@include min-max(992,1199.9){
+  @each $resp in $responsivee{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    :root{
+      $val: calc(($large - $small )/ 4);
+      // $val: ($large - $small) / 4;
+      --res#{$large}-#{$small}: #{$small + ($val * 3)}px;
+    }
+  }
+}
+@include min-max(768,991.9){
+  @each $resp in $responsivee{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    :root{
+      $val: calc(($large - $small )/ 4);
+      // $val: ($large - $small) / 4;
+      --res#{$large}-#{$small}: #{$small + ($val * 2)}px;
+    }
+  }
+}
+@include min-max(576,767.9){
+  @each $resp in $responsivee{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    :root{
+      $val: calc(($large - $small )/ 4);
+      // $val: ($large - $small) / 4;
+      --res#{$large}-#{$small}: #{$small + ($val)}px;
+    }
+  }
+}
+
+@include max(575.9){
+  @each $resp in $responsivee{
+    $large: nth($resp,1);
+    $small: nth($resp,2);
+    :root{
+      $val: calc(($large - $small )/ 4);
+      // $val: ($large - $small) / 4;
+      --res#{$large}-#{$small}: #{$small}px;
+    }
+  }
+}
+
+
+
+
+@each $rval in $rsize{
+  :root{
+      --resb#{$rval}: #{$rval}px;
+  }
+}
+.container{
+  @include max(575.9){
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+  }
+}
+
+.chat-button-wrap{
+  // height: 0px;
+  // width: 100%;
+  // position: sticky;
+  // bottom: 30px;
+  // right: 30px;
+  // text-align: right;
+  // z-index: 1000;
+  z-index: 100;
+  position: relative;
+}
+.chat-button{
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: #5671fd;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: 0;
+  position: absolute;
+  
+  border: none!important;
+  // @include min(992){
+  //   top: -83px;
+  //   right: 30px;
+  // }
+  // @include max(991.9){
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+  // }
+  @include default-button();
+  @include btn-hover(); 
+  &:hover{
+    background-color: $secondary;
+  }
+  @include max(991.9){
+    display: none;
+  }
+}
+
+.max-w-100{
+  max-width: 100%!important;
+}
+.fz-26-16{
+  @include min(1600){
+    font-size: 26px;
+  }
+  @include min-max(1599.9,1200){
+    font-size: 24px;
+  }
+  @include min-max(1199.9,992){
+    font-size: 22px;
+  }
+  @include min-max(991.9,768){
+    font-size: 20px;
+  }
+  @include min-max(767.9,576){
+    font-size: 18px;
+  }
+  @include max(575.9){
+    font-size: 16px;
+  }
+}
+
+.know-more-btn{
+  &.movein-content{
+    &:not(.animated){
+      display: inline-block;
+    }
+  }
+}
+.movein-content,
+.fadein-item{
+  will-change: opacity, transform;
+  &:not(.animated){
+    transition: all 0s ease-in-out!important;
+  }
+}
+.img-zoom-in{
+  &:not(.animated){
+    will-change: opacity, transform;
+    transition: all 0s ease-in-out!important;
+  }
+}
+.img-move-in{
+  &:not(.animated){
+    will-change: transform;
+    transition: all 0s ease-in-out!important;
+  }
+}
+
+@import './components/inner-banner';
