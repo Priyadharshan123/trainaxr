@@ -1,5 +1,4 @@
-/* About Us styles + interactive accordion and team card styles */
-/* Make about-us section share the same dark/bg image as the FAQ so background is continuous */
+
 #about-us-faq {
     padding: 70px 0;
     background: #000000;
@@ -12,7 +11,7 @@
 #about-us-faq .container { width: 85%; margin: 0 auto; color: #e6e6e6; }
 #about-us-faq h2 { font-size: 34px; color: #fff; margin-bottom: 16px; }
 
-/* Accordion */
+
 .accordion .collapsible { 
   background: #191919; 
   color: #fff; 
@@ -42,7 +41,7 @@
 }
 .collapsible-content p, .collapsible-content ul { color: #cfcfcf; margin: 12px 0; }
 
-/* Team grid */
+
 .team { 
     padding: 70px 0; 
     background: #000000;
@@ -69,10 +68,10 @@
 .team-intro p { color: #cfcfcf; font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
 
 .team-grid {
-    /* Use flexbox so an odd number of items (like 5) centers the last row naturally */
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* center entire row content */
+    justify-content: center; 
     gap: 28px;
     margin-top: 30px;
     padding: 0 8px;
@@ -85,11 +84,11 @@
     cursor: pointer;
     transition: all .3s ease;
     border: 1px solid rgba(255,255,255,0.08);
-    flex: 0 1 320px; /* prefer 320px per card but allow shrinking/growing */
-    max-width: 360px; /* cap width */
+    flex: 0 1 320px; 
+    max-width: 360px; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* top-align content so cards look consistent */
+    align-items: flex-start; 
     text-align: left;
 }
 
@@ -103,7 +102,7 @@
     width: 200px;
     height: 200px;
     margin: 0 0 18px 0;
-    /* square with slightly rounded corners */
+   
     border-radius: 8px;
     overflow: hidden;
     border: 3px solid #090a0b;
@@ -153,21 +152,12 @@
     font-size: 15px;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 768px) {
-    .team-grid { grid-template-columns: 1fr; }
-    .team-intro h4 { font-size: 24px; }
-    .team-intro p { font-size: 16px; }
-    .team-card { padding: 18px; max-width: none; align-items: center; text-align: center; }
-    .team-image { width: 160px; height: 160px; margin: 0 auto 14px; }
-    .team-card h5 { text-align: center; font-size: 18px; }
-    .team-card .role { text-align: center; }
+    .team-card { 
+        flex: 0 1 100%; /* full width on mobile */
+        max-width: none;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-/* Responsive */
-@media (max-width: 992px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 576px) { .team-grid { grid-template-columns: 1fr; } .accordion .collapsible { font-size: 16px; } }
