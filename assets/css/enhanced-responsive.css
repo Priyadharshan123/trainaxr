@@ -1,0 +1,192 @@
+/* Enhance existing responsive design without changing structure */
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .metaverse-banner video {
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Header & Navigation */
+    .main-nav {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        z-index: 999;
+        top: 0;
+        left: -100%;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .main-nav.active {
+        left: 0;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Image Responsiveness */
+    .shd-banner-t img,
+    .shd-banner-r img,
+    .shd-curating-l img,
+    .shd-curating-r img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Grid Adjustments */
+    .metaverse-services .row > [class*='col-'] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Typography Adjustments */
+    h1, .h1 {
+        font-size: calc(1.5rem + 1.5vw);
+    }
+
+    h2, .h2 {
+        font-size: calc(1.3rem + 1vw);
+    }
+
+    /* Spacing Adjustments */
+    section {
+        padding: 40px 0;
+    }
+
+    /* Card & Content Blocks */
+    .card, .content-block {
+        margin-bottom: 20px;
+    }
+
+    /* Button Adjustments */
+    .btn {
+        padding: 10px 20px;
+    }
+
+    /* Form Elements */
+    input, select, textarea {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Mobile Optimizations */
+    .mob-btn {
+        right: 15px;
+    }
+
+    /* Stack Elements */
+    .flex-container {
+        flex-direction: column;
+    }
+
+    /* Image Containment */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Text Alignment */
+    .text-center-xs {
+        text-align: center;
+    }
+
+    /* Margin Adjustments */
+    .m-xs-0 {
+        margin: 0 !important;
+    }
+
+    .mb-xs-3 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Critical Viewport Fixes */
+@media screen and (max-width: 360px) {
+    body {
+        min-width: 320px;
+    }
+}
+
+/* Preserve Video Aspect Ratio */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .btn:hover {
+        transform: none !important;
+    }
+
+    .clickable:hover {
+        transform: none !important;
+    }
+}
+
+/* High Resolution Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Fix for Fixed Position Elements on iOS */
+.ios {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Maintain Aspect Ratios */
+[style*="--aspect-ratio"] {
+    position: relative;
+}
+
+[style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+[style*="--aspect-ratio"] > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
