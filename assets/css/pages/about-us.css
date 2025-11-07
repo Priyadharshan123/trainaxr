@@ -212,3 +212,21 @@
         font-size: 14px;
     }
 }
+
+.shd-banner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 0; /* scales with screen width */
+}
+
+.shd-banner-t img,
+.shd-banner-r img {
+  width: 20vw;      /* scales proportionally to viewport width */
+  height: auto;
+  max-width: 300px; /* prevent it from growing too large */
+  min-width: 100px; /* prevent it from shrinking too small */
+  object-fit: contain;
+}
