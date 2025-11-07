@@ -219,14 +219,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw 0; /* scales with screen width */
+  overflow: visible; /* make sure images aren’t cut off */
+  z-index: 1;
+  padding: 2vw 0;
+}
+
+.shd-banner-t,
+.shd-banner-r {
+  position: relative;
+  z-index: 10;
 }
 
 .shd-banner-t img,
 .shd-banner-r img {
-  width: 20vw;      /* scales proportionally to viewport width */
+  width: 20vw;         /* scales automatically with screen width */
   height: auto;
-  max-width: 300px; /* prevent it from growing too large */
-  min-width: 100px; /* prevent it from shrinking too small */
+  max-width: 300px;    /* prevent too large */
+  min-width: 100px;    /* prevent too small */
+  display: block;
   object-fit: contain;
 }
