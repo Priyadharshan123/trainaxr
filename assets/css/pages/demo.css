@@ -781,6 +781,22 @@ body::before {
 
 
 
+.demo-btn-wrapper {
+  margin-top: 20px;
+}
+
+.demo-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00bfff;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.demo-btn:hover {
+  background: #0095cc;
+}
 
 
 
@@ -815,3 +831,6 @@ body::before {
   top: 30px;
   opacity: 1;
 }
+
+
+
