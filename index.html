@@ -508,17 +508,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .mobile-ar-section .mar-row{flex-direction:column-reverse;align-items:center}
         .mobile-ar-section .mar-visual{width:200px}
         .phone-frame{width:160px;height:320px}
-      }
-    </style>
 
-    <script>
-      // Add scroll-trigger and hover play state for the phone mock
-      (function(){
-        var phone = document.querySelector('.phone-wrap');
-        if(!phone) return;
-        // Intersection observer to add 'playing' when visible
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
+        /* Mobile/tablet: do not use sticky left column (prevents overlap) */
+        .faq-left {
+          position: static !important;
+          justify-content: flex-start;
+          margin-bottom: 18px;
+          width: 100%;
+        }
+
+        /* Allow the FAQ list to expand naturally on small screens */
+        .faq-right {
+          height: auto !important;
+          padding-left: 0;
+          width: 100%;
+          box-sizing: border-box;
+          padding-right: 12px;
+          overflow: visible;
+        }
+
+        /* hide the thin left scroll track on small screens to avoid overlap */
+        .faq-right .faq-scroll { display: none; }
             if(e.isIntersecting) phone.classList.add('playing');
             else phone.classList.remove('playing');
           });
@@ -879,7 +889,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
 
     </section>
 
-    <section class="testimonial-c">
+ <section class="testimonial-c">
         <div class="shd-resources-c">
             <img src="assets/images/metaverse/ar-vr-in-automotive-industry/resources-shd-1.webp">
         </div>
@@ -928,7 +938,6 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
 
         </div>
     </section>
-
     
 
     <!-- <section class="resources">
@@ -1160,12 +1169,6 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     margin: 0;
   }
 
-  .faq-left .line {
-    width: 70px;
-    height: 2px;
-    background: #0dcaf0;
-    margin-left: 15px;
-  }
 
   .faq-right {
     flex: 1;
@@ -1174,6 +1177,50 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     overflow-y: auto;
     scrollbar-width: none;
     position: relative;
+  }
+
+  
+  .faq-right .faq-scroll {
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    bottom: 0px;
+    width: 1px;
+    display: block;
+    pointer-events: auto;
+    z-index: 4;
+  }
+
+  .faq-right .faq-scroll .faq-scroll-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+  }
+
+  .faq-right .faq-scroll .faq-scroll-thumb {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    background: #07cfc2;
+    box-shadow: 0 2px 6px rgba(7,207,194,0.12);
+    border-radius: 6px;
+    height: 17px; 
+    transform: translateY(0);
+    transition: transform .08s linear;
+    /* make thumb non-interactive: follow scroll only (no dragging) */
+    cursor: default;
+    pointer-events: none;
+  }
+
+
+ 
+  @media (max-width: 480px) {
+    .faq-right .faq-scroll { display: none; }
   }
 
   .faq-right::-webkit-scrollbar {
@@ -1199,7 +1246,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     transition: color 0.5s ease, transform 0.3s ease;
   }
 
-  /* Smooth highlight fade */
+  
   .faq-right li.visible h3 {
     color: #0dcaf0;
     transform: scale(1.02);
@@ -1239,12 +1286,21 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     .faq-left {
       position: relative;
       justify-content: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
+      /* keep the heading full width above the list on small screens */
+      width: 100%;
+      flex: 0 0 auto;
     }
 
     .faq-right {
       height: auto;
       padding-left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 12px;
+      padding-top: 6px;
+      /* hide the left-side thin track on narrower viewports to avoid overlap */
+      overflow: visible;
     }
 
     .faq-left h2 {
@@ -1253,11 +1309,36 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
 
     .faq-right h3 {
       font-size: 18px;
+      padding: 10px 8px;
+      line-height: 1.25;
     }
 
     .faq-right p {
-      font-size: 13px;
+      font-size: 14px;
+      padding: 0 8px 12px 8px;
     }
+  }
+
+  /* Strict mobile-only tweaks (<=768px) - non-design-changing, only layout fixes */
+  @media (max-width: 768px) {
+    /* disable sticky heading to avoid overlap with the FAQ list */
+    .faq-left { position: static !important; top: auto; margin-bottom: 12px; }
+
+    /* let the FAQ list grow naturally and remove fixed-height scrolling */
+    .faq-right { height: auto !important; overflow: visible !important; padding-left: 0; padding-right: 8px; }
+
+    /* hide the decorative/interactive thin track on small screens */
+    .faq-right .faq-scroll { display: none !important; }
+
+    /* slightly increase touch targets without changing look */
+    .faq-right h3 { padding: 12px 6px; font-size: 17px; }
+    .faq-right p { padding: 0 6px 14px 6px; font-size: 14px; line-height: 1.6; }
+  }
+
+  @media (max-width: 480px) {
+    .faq-left h2 { font-size: 28px; }
+    .faq-right h3 { font-size: 16px; }
+    .faq-right { padding-left: 0; padding-right: 6px; }
   }
 </style>
 
@@ -1266,10 +1347,14 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     <div class="faq-content">
       <div class="faq-left">
         <h2>FAQs</h2>
-        <div class="line"></div>
+        
       </div>
 
       <div class="faq-right">
+        <div class="faq-scroll" aria-hidden="false">
+          <div class="faq-scroll-track"></div>
+          <div class="faq-scroll-thumb"></div>
+        </div>
         <ul>
           <li>
             <h3>What industries does Traina XR support?</h3>
@@ -1321,7 +1406,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     const faqItems = document.querySelectorAll(".faq-right li");
     const faqContainer = document.querySelector(".faq-right");
 
-    // Click to open answer
+    
     faqItems.forEach(item => {
       const question = item.querySelector("h3");
       question.addEventListener("click", () => {
@@ -1330,35 +1415,74 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
         });
         item.classList.toggle("active");
         if (item.classList.contains("active")) {
-          item.scrollIntoView({ behavior: "smooth", block: "center" });
+          // on narrow viewports prefer 'nearest' to avoid large jumps; keep 'center' for desktop
+          const block = (window.innerWidth && window.innerWidth <= 768) ? 'nearest' : 'center';
+          item.scrollIntoView({ behavior: 'smooth', block: block });
         }
       });
     });
 
-    // Highlight only the question closest to the center line
-    faqContainer.addEventListener("scroll", () => {
-      const containerRect = faqContainer.getBoundingClientRect();
-      const centerLine = containerRect.top + containerRect.height / 2;
-
-      let closestItem = null;
-      let smallestDistance = Infinity;
-
-      faqItems.forEach(item => {
-        const itemRect = item.getBoundingClientRect();
-        const itemCenter = itemRect.top + itemRect.height / 2;
-        const distance = Math.abs(itemCenter - centerLine);
-
-        if (distance < smallestDistance) {
-          smallestDistance = distance;
-          closestItem = item;
-        }
-      });
+   
 
       // Remove visible class from all
       faqItems.forEach(item => item.classList.remove("visible"));
-      // Add visible only to the closest one
-      if (closestItem) closestItem.classList.add("visible");
-    });
+    
+      
+
+      // Update custom left-side scroll thumb
+      const faqScroll = document.querySelector('.faq-right .faq-scroll');
+      const faqThumb = document.querySelector('.faq-right .faq-scroll-thumb');
+
+      function updateFaqThumb() {
+  if (!faqScroll || !faqThumb || !faqContainer) return;
+
+  const visibleH = faqContainer.clientHeight;
+  const contentH = faqContainer.scrollHeight;
+  const trackH = faqScroll.clientHeight;
+
+  // Calculate thumb height (min 24px)
+  const thumbH = Math.max(24, Math.round((visibleH / contentH) * trackH));
+  faqThumb.style.height = thumbH + 'px';
+
+  // Calculate scroll progress ratio (0–1)
+  const scrollTop = faqContainer.scrollTop;
+  const scrollRatio = scrollTop / (contentH - visibleH);
+
+  // Calculate available track space
+  const maxTop = trackH - thumbH;
+
+  // Map scroll progress to thumb position
+  const thumbTop = Math.min(maxTop, Math.max(0, scrollRatio * maxTop));
+  faqThumb.style.transform = `translateY(${thumbTop}px)`;
+}
+
+      // Sync on scroll/resize
+      if (faqContainer) {
+        faqContainer.addEventListener('scroll', updateFaqThumb);
+        window.addEventListener('resize', updateFaqThumb);
+        // ensure correct sizing after all resources load (images/fonts)
+        window.addEventListener('load', updateFaqThumb);
+        // initialize after a slight delay to ensure layout
+        setTimeout(updateFaqThumb, 60);
+      }
+
+      // click on track to jump
+      const faqTrack = document.querySelector('.faq-right .faq-scroll-track');
+      if (faqTrack && faqContainer) {
+        faqTrack.addEventListener('click', function (e) {
+          const rect = faqTrack.getBoundingClientRect();
+          const clickY = e.clientY - rect.top;
+          // compute target scroll so clicked point centers
+          const visibleH = faqContainer.clientHeight;
+          const contentH = faqContainer.scrollHeight;
+          const target = Math.min(Math.max(0, (clickY / faqTrack.clientHeight) * contentH - visibleH / 2), contentH - visibleH);
+          faqContainer.scrollTo({ top: target, behavior: 'smooth' });
+        });
+      }
+
+      // Drag-to-scroll removed: thumb now only reflects the container scroll position.
+      // The thumb is non-interactive (pointer-events:none) and will move via the
+      // updateFaqThumb() handler attached to the container's scroll event.
   });
 </script>
 
