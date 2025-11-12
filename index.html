@@ -2,7 +2,25 @@
 <html lang="en">
 
 <head>
+<style>
+  
+.demo-btn-wrapper {
+  margin-top: 20px;
+}
 
+.demo-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00bfff;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.demo-btn:hover {
+  background: #0095cc;
+}
+</style>
 
 
     <!-- Meta title and description -->
@@ -138,7 +156,7 @@
                                 
                             </ul>
                         </li>
-                        
+                        <li><a href="contact.html" id="insights-nav"><span>Contact Us</span></a></li>
                         <li><a href="aboutus.html" id="insights-nav"><span>About Us</span></a></li>
                         
                         <li><a href="demo.html"><span>Request Demo</span></a></li>
@@ -215,12 +233,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="a-text">
-            <p> TrainaXR, a leading customer-focused organization delivers Immersive Content Production Services that 
-                aid businesses in their digital transformation journey. TrainXR deploys a suite of Virtual Reality (VR),
-                Augmented Reality (AR), Mixed Reality (MR), 360° Videos, Metaverse Concepts, and Digital Twins (DT)
-                technologies to create an interactive storyline and simulated environments. 
-                This will enhance customer experience and also add value to your business.
+            <p> Smarter training doesn’t just save time it saves lives,
+               reduces costs, and delivers measurable ROI across every department.
+               AR and VR technologies have taken each and every industry to the next level,
+                offering unparalleled
+            benefits like immersive tours and virtual staging that make it easier for 
+            customers to make decisions
+            with confidence
             </p>
+            <div class="demo-btn-wrapper">
+    <a href="demo.html" id="bookNowBtn" class="demo-btn">contact Us</a>
+</div>
           </div>
 
         </div>
@@ -247,10 +270,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </h2>
 
 
-          <p>AR and VR technologies have taken each and every industry to the next level, offering unparalleled
-            benefits like immersive tours and virtual staging that make it easier for customers to make decisions
-            with confidence
-          </p>
+         
         </div>
 
         <div class="industries-grid">
@@ -1212,7 +1232,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     height: 17px; 
     transform: translateY(0);
     transition: transform .08s linear;
-    /* make thumb non-interactive: follow scroll only (no dragging) */
+  
     cursor: default;
     pointer-events: none;
   }
@@ -1287,7 +1307,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
       position: relative;
       justify-content: flex-start;
       margin-bottom: 18px;
-      /* keep the heading full width above the list on small screens */
+     
       width: 100%;
       flex: 0 0 auto;
     }
@@ -1299,7 +1319,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
       box-sizing: border-box;
       padding-right: 12px;
       padding-top: 6px;
-      /* hide the left-side thin track on narrower viewports to avoid overlap */
+      
       overflow: visible;
     }
 
@@ -1319,18 +1339,18 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
     }
   }
 
-  /* Strict mobile-only tweaks (<=768px) - non-design-changing, only layout fixes */
+  
   @media (max-width: 768px) {
-    /* disable sticky heading to avoid overlap with the FAQ list */
+    
     .faq-left { position: static !important; top: auto; margin-bottom: 12px; }
 
-    /* let the FAQ list grow naturally and remove fixed-height scrolling */
+    
     .faq-right { height: auto !important; overflow: visible !important; padding-left: 0; padding-right: 8px; }
 
-    /* hide the decorative/interactive thin track on small screens */
+    
     .faq-right .faq-scroll { display: none !important; }
 
-    /* slightly increase touch targets without changing look */
+    
     .faq-right h3 { padding: 12px 6px; font-size: 17px; }
     .faq-right p { padding: 0 6px 14px 6px; font-size: 14px; line-height: 1.6; }
   }
@@ -1415,7 +1435,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
         });
         item.classList.toggle("active");
         if (item.classList.contains("active")) {
-          // on narrow viewports prefer 'nearest' to avoid large jumps; keep 'center' for desktop
+          
           const block = (window.innerWidth && window.innerWidth <= 768) ? 'nearest' : 'center';
           item.scrollIntoView({ behavior: 'smooth', block: block });
         }
@@ -1424,12 +1444,11 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
 
    
 
-      // Remove visible class from all
       faqItems.forEach(item => item.classList.remove("visible"));
     
       
 
-      // Update custom left-side scroll thumb
+      
       const faqScroll = document.querySelector('.faq-right .faq-scroll');
       const faqThumb = document.querySelector('.faq-right .faq-scroll-thumb');
 
@@ -1440,18 +1459,18 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
   const contentH = faqContainer.scrollHeight;
   const trackH = faqScroll.clientHeight;
 
-  // Calculate thumb height (min 24px)
+  
   const thumbH = Math.max(24, Math.round((visibleH / contentH) * trackH));
   faqThumb.style.height = thumbH + 'px';
 
-  // Calculate scroll progress ratio (0–1)
+ 
   const scrollTop = faqContainer.scrollTop;
   const scrollRatio = scrollTop / (contentH - visibleH);
 
-  // Calculate available track space
+  
   const maxTop = trackH - thumbH;
 
-  // Map scroll progress to thumb position
+ 
   const thumbTop = Math.min(maxTop, Math.max(0, scrollRatio * maxTop));
   faqThumb.style.transform = `translateY(${thumbTop}px)`;
 }
@@ -1460,19 +1479,18 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
       if (faqContainer) {
         faqContainer.addEventListener('scroll', updateFaqThumb);
         window.addEventListener('resize', updateFaqThumb);
-        // ensure correct sizing after all resources load (images/fonts)
-        window.addEventListener('load', updateFaqThumb);
-        // initialize after a slight delay to ensure layout
+        
+       
         setTimeout(updateFaqThumb, 60);
       }
 
-      // click on track to jump
+     
       const faqTrack = document.querySelector('.faq-right .faq-scroll-track');
       if (faqTrack && faqContainer) {
         faqTrack.addEventListener('click', function (e) {
           const rect = faqTrack.getBoundingClientRect();
           const clickY = e.clientY - rect.top;
-          // compute target scroll so clicked point centers
+         
           const visibleH = faqContainer.clientHeight;
           const contentH = faqContainer.scrollHeight;
           const target = Math.min(Math.max(0, (clickY / faqTrack.clientHeight) * contentH - visibleH / 2), contentH - visibleH);
@@ -1480,9 +1498,7 @@ Track progress, uncover skill gaps, and optimize training effectiveness with act
         });
       }
 
-      // Drag-to-scroll removed: thumb now only reflects the container scroll position.
-      // The thumb is non-interactive (pointer-events:none) and will move via the
-      // updateFaqThumb() handler attached to the container's scroll event.
+    
   });
 </script>
 

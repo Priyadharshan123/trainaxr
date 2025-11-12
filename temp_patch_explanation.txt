@@ -1,0 +1,1 @@
+Add CSS rule to hide horizontal overflow to remove bottom scroll bar.

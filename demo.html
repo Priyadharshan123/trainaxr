@@ -33,7 +33,7 @@
  <link rel="stylesheet" href="assets\css\pages\demo.css">
  
   
-  
+  <script src="demo.js"></script>
 
 
 
@@ -42,7 +42,7 @@
     <meta name="theme-color" content="#ffffff">
 
  <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {     //form appear
   const bookNowBtn = document.getElementById("bookNowBtn");
   const demoText = document.getElementById("demoText");
   const formContainer = document.getElementById("formContainer");
@@ -71,31 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const demoForm = document.getElementById("demoForm");
-
-  demoForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent reload
-
-    // Create popup element
-    const popup = document.createElement("div");
-    popup.classList.add("toast-popup");
-    popup.textContent = "Thank you! We'll contact you shortly to schedule your demo.";
-
-    document.body.appendChild(popup);
-
-    // Trigger slide-in
-    setTimeout(() => popup.classList.add("show"), 100);
-
-    // Auto hide after 3 seconds
-    setTimeout(() => {
-      popup.classList.remove("show");
-      setTimeout(() => popup.remove(), 400);
-    }, 3000);
-  });
-});
-</script>
 
 
 
@@ -110,81 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // -- Collapsible sections (About Us) --
-            var coll = document.getElementsByClassName("collapsible");
-            for (var i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    // Close all other open sections first
-                    var allCollapsible = document.getElementsByClassName("collapsible");
-                    for (var j = 0; j < allCollapsible.length; j++) {
-                        if (allCollapsible[j] !== this) {
-                            allCollapsible[j].classList.remove("active");
-                            allCollapsible[j].setAttribute('aria-expanded', 'false');
-                            var otherContent = allCollapsible[j].nextElementSibling;
-                            if (otherContent) otherContent.style.maxHeight = null;
-                        }
-                    }
-                    // Toggle the clicked section
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (!content) return;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        this.setAttribute('aria-expanded', 'false');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        this.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            }
-
-            // -- Team cards: toggle on card click and ensure only clicked card opens --
-            var teamCards = document.querySelectorAll('.team-card');
-            var expandedCard = null;
-            teamCards.forEach(function(card){
-                var bio = card.querySelector('.team-bio');
-                if (!bio) return;
-
-                // click on the card toggles its bio
-                card.addEventListener('click', function(e){
-                    // if clicking inside the bio content, ignore to allow links/selecting text
-                    if (e.target.closest('.team-bio')) return;
-
-                    // toggle the clicked card
-                    if (expandedCard === card) {
-                        bio.style.maxHeight = null;
-                        card.classList.remove('active');
-                        expandedCard = null;
-                        return;
-                    }
-
-                    // close previously expanded card
-                    if (expandedCard) {
-                        var prevBio = expandedCard.querySelector('.team-bio');
-                        if (prevBio) prevBio.style.maxHeight = null;
-                        expandedCard.classList.remove('active');
-                    }
-
-                    // open current
-                    bio.style.maxHeight = bio.scrollHeight + 'px';
-                    card.classList.add('active');
-                    expandedCard = card;
-                });
-            });
-            // clicking outside should close any open card
-            document.addEventListener('click', function(e){
-                if (!expandedCard) return;
-                if (e.target.closest && !e.target.closest('.team-card')) {
-                    var prevBio = expandedCard.querySelector('.team-bio');
-                    if (prevBio) prevBio.style.maxHeight = null;
-                    expandedCard.classList.remove('active');
-                    expandedCard = null;
-                }
-            });
-        });
-    </script>
+   
 
 
  <header class="main-header">
@@ -326,6 +227,10 @@ document.addEventListener("DOMContentLoaded", function () {
           
 
            <form id="demoForm">
+            <input type="hidden" id="api_url" value="https://trainxra.com/" />
+<input type="hidden" id="ipaddress" name="ipaddress">
+<input type="hidden" id="jwtToken" name="jwtToken">
+
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name:</label>
@@ -350,8 +255,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="text" id="company" name="company" required>
               </div>
               <div class="form-group">
-                <label for="companySize">Company Size:</label>
-                <select id="companySize" name="companySize">
+                <label for="company_size">Company Size:</label>
+                <select id="company_size" name="company_size">
                   <option value="">Please Select</option>
                   <option value="1-50">1–50</option>
                   <option value="51-200">51–200</option>
@@ -531,4 +436,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script src="assets/js/main.js"></script>
+
+
+<script>
+  document.getElementById("demoForm").addEventListener("submit", async function(e){
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    const response = await fetch("assets/php/save-request-details.php", { method:"POST", body:formData });
+    const result = await response.text();
+
+    if(result.includes("success")){
+        alert("✅ Submitted successfully!");
+        this.reset();
+    } else {
+        alert("⚠️ " + result);
+    }
+});
+
+</script>
+
   </body>

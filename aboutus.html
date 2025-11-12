@@ -2,14 +2,19 @@
 <html lang="en">
 
 <head>
-   
-   
+
+
+
+    <!-- Meta title and description -->
+    <title>TrainaXR</title>
+    <link rel="icon" type="image/x-icon" href="IMG-20250803-WA0094-removebg-preview.png">
     
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/enhanced-responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/pages/industry-icons.css">
     <link rel="stylesheet" href="assets/css/pages/about-us.css">
     
+    <!-- Industry redirects script -->
+    <script src="assets/js/industry-redirects.js" defer></script>
+
 
 
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -26,109 +34,67 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // -- Collapsible sections (About Us) --
-            var coll = document.getElementsByClassName("collapsible");
-            for (var i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    // Close all other open sections first
-                    var allCollapsible = document.getElementsByClassName("collapsible");
-                    for (var j = 0; j < allCollapsible.length; j++) {
-                        if (allCollapsible[j] !== this) {
-                            allCollapsible[j].classList.remove("active");
-                            allCollapsible[j].setAttribute('aria-expanded', 'false');
-                            var otherContent = allCollapsible[j].nextElementSibling;
-                            if (otherContent) otherContent.style.maxHeight = null;
-                        }
-                    }
-                    // Toggle the clicked section
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (!content) return;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        this.setAttribute('aria-expanded', 'false');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        this.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            }
-
-            // -- Team cards: toggle on card click and ensure only clicked card opens --
-            var teamCards = document.querySelectorAll('.team-card');
-            var expandedCard = null;
-            teamCards.forEach(function(card){
-                var bio = card.querySelector('.team-bio');
-                if (!bio) return;
-
-                // click on the card toggles its bio
-                card.addEventListener('click', function(e){
-                    // if clicking inside the bio content, ignore to allow links/selecting text
-                    if (e.target.closest('.team-bio')) return;
-
-                    // toggle the clicked card
-                    if (expandedCard === card) {
-                        bio.style.maxHeight = null;
-                        card.classList.remove('active');
-                        expandedCard = null;
-                        return;
-                    }
-
-                    // close previously expanded card
-                    if (expandedCard) {
-                        var prevBio = expandedCard.querySelector('.team-bio');
-                        if (prevBio) prevBio.style.maxHeight = null;
-                        expandedCard.classList.remove('active');
-                    }
-
-                    // open current
-                    bio.style.maxHeight = bio.scrollHeight + 'px';
-                    card.classList.add('active');
-                    expandedCard = card;
-                });
-            });
-            // clicking outside should close any open card
-            document.addEventListener('click', function(e){
-                if (!expandedCard) return;
-                if (e.target.closest && !e.target.closest('.team-card')) {
-                    var prevBio = expandedCard.querySelector('.team-bio');
-                    if (prevBio) prevBio.style.maxHeight = null;
-                    expandedCard.classList.remove('active');
-                    expandedCard = null;
-                }
-            });
-        });
-    </script>
   <link rel="stylesheet" href="assets/css/pages/ar-vr-in-manufacturing-industry.css">
   <link rel="stylesheet" href="assets/css/pages/ar-vr-in-real-estate.css">
+
   <link rel="stylesheet" href="assets/css/pages/insight-detail-page.css">
   <link rel="stylesheet" href="assets/css/pages/metaverse-services.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/mobile-nav.css">
  
 
- 
- 
-    <header class="main-header">
+      <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start ':
+                    new Date().getTime(), event: 'gtm.js '
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer ' ? '&l=' + l : ' '; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, ' script ', 'dataLayer ', 'GTM-MR7JS5M ');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="assets/js/php-js/pop-up.js"></script>
+  <link rel="stylesheet" href="assets/css/pages/pop-up.css">
+
+
+
+ <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5107358,hjsv:6};
+            a=o.getElementsByTagName('head ')[0];
+            r=o.createElement('script ');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar- ','.js?sv=');
+    </script>    
+    
+</head>
+<body>
+<header class="main-header">
         <div class="container d-flex align-items-center">
             <div class="logo">
                 <a href="index.html">
-                   <img src="assets/images/home/Picture3.png" height="40px">
-
+                    <img src="assets\images\home\Picture3.png" height="40vh" alt="Logo"/>
                 </a>
             </div>
             <div class="header-right ms-auto d-flex align-items-center">
                 <nav class="main-nav">
                     <ul>
-                         <li><a href="index.html" id="insights-nav"><span>Home</span></a></li>
-                        
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#" id="industries-nav"><span>Industry</span></a>
-                            <ul class="dropdown-menu">
+                       
+                        <li><a href="index.html" id="insights-nav"><span>Home</span></a></li>
+                      <li class="dropdown">
+    <a class="dropdown-toggle" href="#" id="industries-nav" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>Industry</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="industries-nav">
+
                                 <li>
                                     <a class="dropdown-item" href="healthcare.html"  id="ar-vr-in-chemical-industry-nav">
                                         <span>AR VR in Medical & Healthcare</span>
@@ -172,8 +138,9 @@
                                 
                             </ul>
                         </li>
-                        
+                        <li><a href="contact.html" id="insights-nav"><span>Contact Us</span></a></li>
                         <li><a href="aboutus.html" id="insights-nav"><span>About Us</span></a></li>
+                        
                         <li><a href="demo.html"><span>Request Demo</span></a></li>
                     </ul>
                     <div class="d-block d-lg-none get-in-touch-nav">
@@ -196,179 +163,319 @@
         </div>
         <div class="overlay"></div>
     </header>
-    
-</head>
-     
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7JS5M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+<section class="story-section">
+            <div class="container">
+                <div class="story-hero">
+                    <div class="hero-text">
+                        <h1 class="hero-title animate-on-scroll">The Story of Traina XR</h1>
+                        <p class="hero-paragraph animate-on-scroll">Every breakthrough starts with a simple question: “What if training felt real?” At Traina XR, we saw a world where surgeons, engineers, pilots, and students were still learning with manuals, slides, and classroom methods that couldn’t replicate real-world pressure or precision. That’s when we built Traina XR with one core belief:</p>
+                        
+                    </div>
+                    <div class="hero-visual">
+                        <div class="parallax-layer">
+                            <img class="hero-img animate-on-scroll" src="assets\images\home\Picture3.png" alt="VR headset">
+                        </div>
+                    </div>
+                </div>
+</section>
+
+
+     <!-- Feature section: Practice in Pixels (two-column sliding layout) -->
+        <section class="feature-section">
+            <div class="feature-container">
+                <div class="feature-left">
+                    <h2 class="feature-headline animate-on-scroll slide-left">Practice in Pixels. Perfect in Reality.</h2>
+                    <p class="feature-lead animate-on-scroll slide-up">We create hyper-realistic XR environments where mistakes aren’t failures, they’re lessons. Where every movement, every decision, and every second can be rehearsed until it becomes instinct.</p>
+                    <p class="feature-paragraph animate-on-scroll slide-left">But we didn’t do it alone. Our collaboration with Ramestha Infoimmersive blends world-class creativity with technical expertise to craft experiences that aren’t just training modules, but immersive journeys. Together, we bring cinematic storytelling, flawless 3D design, and human-centered learning into every simulation we build.</p>
+                </div>
+
+                <aside class="feature-right">
+                    <div class="feature-heading-row animate-on-scroll slide-right">
+                        <div class="bar"></div>
+                        <h4>Transformative Impact</h4>
+                    </div>
+
+                    <p class="feature-paragraph animate-on-scroll slide-right">From a surgeon performing their first complex procedure to a factory team preventing workplace accidents, from a student exploring the human body to a pilot mastering emergency protocol, we are changing the way the world learns, works, and saves lives.</p>
+
+                    <div style="height:18px"></div>
+
+                    <div class="feature-heading-row animate-on-scroll slide-right">
+                        <div class="bar"></div>
+                        <h4>Global Reach</h4>
+                    </div>
+
+                    <p class="feature-paragraph animate-on-scroll slide-right">Traina XR is a product of Dreamverse Limited, registered in the United Kingdom. With our headquarters in Northampton and creative hubs in Bangalore and Chicago, we deliver immersive XR training solutions to businesses globally.</p>
+                </aside>
+            </div>
+             <div class="global-presence">
+                        <h3 class="animate-on-scroll">Our Global Presence</h3>
+                        <p class="animate-on-scroll">Traina XR is built on a global vision and supported by a network of innovation hubs across three countries:</p>
+                        <div class="locations-grid">
+                            <div class="location-card animate-on-scroll">
+                                <h4>United Kingdom – Headquarters</h4>
+                                <p>Dreamverse Limited<br>20–22 St Giles Street<br>Northampton NN1 1JA</p>
+                            </div>
+                            <div class="location-card animate-on-scroll">
+                                <h4>India – Development & Creative Lab</h4>
+                                <p>#21, 35th A Cross<br>4th T Block, Jayanagar<br>Bangalore</p>
+                            </div>
+                            <div class="location-card animate-on-scroll">
+                                <h4>United States – North American Operations</h4>
+                                <p>724 S Oakley Blvd, Unit-1<br>Chicago, Illinois 60612</p>
+                            </div>
+                        </div>
+                        <p class="global-footer animate-on-scroll">This global footprint allows us to deliver scalable XR solutions and provide dedicated support to clients worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
  
-  <body>
 
    
-    
+    <script>
+    // Lightweight scroll reveal + pointer + scroll parallax for hero
+    document.addEventListener('DOMContentLoaded', function(){
+        // IntersectionObserver reveal
+        const els = document.querySelectorAll('.animate-on-scroll');
+        const io = new IntersectionObserver((entries)=>{
+            entries.forEach(ent => {
+                if(ent.isIntersecting){
+                    ent.target.classList.add('in-view');
+                    io.unobserve(ent.target);
+                }
+            });
+        }, {threshold: 0.12});
+        els.forEach((el,i)=>{ el.style.transitionDelay = (i*0.06)+'s'; io.observe(el); });
+
+        // Pointer + scroll parallax for hero image
+        const hero = document.querySelector('.story-hero');
+        const layer = document.querySelector('.parallax-layer');
+        const heroImg = document.querySelector('.hero-img');
+        if(!hero || !layer) return;
+
+        // state
+        let pointerX = 0, pointerY = 0; // in px
+        let targetPointerX = 0, targetPointerY = 0;
+        let lastScrollY = window.scrollY;
+        let needsUpdate = false;
+
+        // pointer movement (small offsets)
+        hero.addEventListener('mousemove', function(e){
+            const r = hero.getBoundingClientRect();
+            const px = (e.clientX - r.left)/r.width - 0.5; // -0.5..0.5
+            const py = (e.clientY - r.top)/r.height - 0.5;
+            // map to pixels
+            targetPointerX = px * 18; // horizontal sway
+            targetPointerY = py * 8;  // vertical sway
+            needsUpdate = true;
+        });
+        hero.addEventListener('mouseleave', function(){ targetPointerX = 0; targetPointerY = 0; needsUpdate = true; });
+
+        // scroll-driven movement: compute progress that starts early (while hero is still visible)
+        function computeScrollProgress(){
+            const r = hero.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            // We'll start the hide animation when the hero's top reaches 15% of the viewport height
+            // and finish when the hero top has moved up by 40% of its height.
+            const startTrigger = vh * 0.15; // when r.top <= startTrigger => progress starts
+            const endTrigger = - (r.height * 0.4); // when r.top <= endTrigger => progress = 1
+
+            // If hero is below the startTrigger, progress is 0
+            if (r.top > startTrigger) return 0;
+
+            // compute linear progress between startTrigger and endTrigger
+            const raw = (startTrigger - r.top) / (startTrigger - endTrigger);
+            const prog = Math.min(Math.max(raw, 0), 1);
+            return prog;
+        }
+
+        // RAF loop to smoothly interpolate pointer offsets and apply combined transform
+        function rafUpdate(){
+            // lerp pointer offsets
+            pointerX += (targetPointerX - pointerX) * 0.12;
+            pointerY += (targetPointerY - pointerY) * 0.12;
+
+            // scroll progress
+            const prog = computeScrollProgress();
+            // as prog increases, move the image to the RIGHT off-screen and fade it out
+            const imgW = heroImg ? heroImg.getBoundingClientRect().width : (hero.getBoundingClientRect().width*0.6);
+            const offscreen = imgW * 1.4; // how far to move to hide fully
+            const scrollTx = prog * offscreen; // moves image right by up to offscreen px
+            const scrollTy = -prog * 8; // slight upward movement
+            const scale = 1 - prog * 0.06;
+            const opacity = Math.max(0, 1 - prog * 1.2);
+
+            const tx = pointerX + scrollTx;
+            const ty = pointerY + scrollTy;
+            layer.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
+            layer.style.opacity = opacity.toFixed(3);
+
+            // add subtle float to image if it's in view
+            if(heroImg && heroImg.classList.contains('in-view')){
+                // keep float via CSS animation; nothing needed here
+            }
+
+            needsUpdate = false;
+            requestAnimationFrame(rafUpdate);
+        }
+        requestAnimationFrame(rafUpdate);
+
+        // trigger updates on scroll
+        window.addEventListener('scroll', function(){ needsUpdate = true; lastScrollY = window.scrollY; });
+        // also on resize
+        window.addEventListener('resize', function(){ needsUpdate = true; });
+    });
+    </script>
 
 
 
-  
-    <section class="about-us-faq" id="about-us-faq">
-                 
-     
-           <div class="container">
-   
-    
-  
-                        <div class="team-intro">
-                            <h4>ABOUT US</h4>
-                             </div>
-                        <div class="accordion">
-                            <button class="collapsible" aria-expanded="false">The Story of Traina XR</button>
-                            <div class="collapsible-content">
-                                <p>Every breakthrough starts with a simple question: “What if training felt real?” At Traina XR, we saw a world where surgeons, engineers, pilots, and students were still learning with manuals, slides, and classroom methods that couldn’t replicate real-world pressure or precision. That’s when we built Traina XR with one core belief: <strong>Practice in Pixels. Perfect in Reality.</strong></p>
 
-                                <p>We create hyper-realistic XR environments where mistakes aren’t failures, they’re lessons. Where every movement, every decision, and every second can be rehearsed until it becomes instinct.</p>
 
-                                <p>But we didn’t do it alone. Our collaboration with Ramestha Infoimmersive blends world-class creativity with technical expertise to craft experiences that aren’t just training modules, but immersive journeys. Together, we bring cinematic storytelling, flawless 3D design, and human-centered learning into every simulation we build.</p>
 
-                                <p>From a surgeon performing their first complex procedure to a factory team preventing workplace accidents, from a student exploring the human body to a pilot mastering emergency protocol, we are changing the way the world learns, works, and saves lives.</p>
+<!--
+This is a multi-line comment in HTML.
 
-                                <p>Traina XR is a product of Dreamverse Limited, registered in the United Kingdom. With our headquarters in Northampton and creative hubs in Bangalore and Chicago, we deliver immersive XR training solutions to businesses globally.</p>
-                            </div>
+-->
 
-                            <button class="collapsible" aria-expanded="false">Mission</button>
-                            <div class="collapsible-content">
-                                <p>To create training so real it saves lives, transforms teams, and reshapes industries. At Traina XR, we turn practice in pixels into perfection in reality—reducing risk, cutting costs, and making every skill mastered count where it matters most.</p>
-                            </div>
+<style>
+.team-section {
+  margin: 0;
+  background-image:url("assets/images/metaverse/service-1/bg2.png");;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-                            <button class="collapsible" aria-expanded="false">Vision</button>
-                            <div class="collapsible-content">
-                                <p>To make practice in pixels the global standard, empowering every industry to train smarter, work safer, and save lives.</p>
-                            </div>
+.orbit-section {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
 
-                            <button class="collapsible" aria-expanded="false">Our Global Presence</button>
-                            <div class="collapsible-content">
-                                <p>Traina XR is built on a global vision and supported by a network of innovation hubs across three countries:</p>
-                                <ul>
-                                    <li><strong>United Kingdom – Headquarters</strong><br>Dreamverse Limited<br>20–22 St Giles Street, Northampton NN1 1JA</li>
-                                    <li><strong>India – Development & Creative Lab</strong><br>#21, 35th A Cross, 4th T Block, Jayanagar, Bangalore</li>
-                                    <li><strong>United States – North American Operations</strong><br>724 S Oakley Blvd, Unit-1, Chicago, Illinois 60612</li>
-                                </ul>
-                            </div>
-                        </div>
+h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #0dcaf0;
+}
 
-                        
-                        
-                    </div>
-                </section>
+.orbit-container {
+  position: relative;
+  width: 1000px;
+  height: 420px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
 
-                <!-- Team section -->
-                <section class="team">
-                    
-                     <div class="shd-banner-t">
-    <img src="assets/images/metaverse/ar-vr-in-automotive-industry/curating-shd-1.webp">
+.card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 250px;
+  height: 350px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-50%) scale(0.9);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color:#111
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+</style>
+
+<section class="team-section">
+<div class="orbit-section">
+  <h2>The Team Turning Vision Into Virtual Reality</h2>
+  <div class="orbit-container">
+    <div class="card"><img src="https://images.unsplash.com/photo-1603415526960-f7e0328ad60a" alt=""><h3>Custom SEO Services</h3><p>Organic SEO strategies to drive traffic with real growth metrics.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt=""><h3>SEO Website Design</h3><p>We build SEO-optimized websites with powerful design and performance.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793" alt=""><h3>SEO Consulting</h3><p>Data-driven consulting to enhance online presence and visibility.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt=""><h3>Content Marketing</h3><p>Create SEO-friendly content that engages and converts.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1591696331117-7c64d4e77a0a" alt=""><h3>Link Building</h3><p>Boost your website authority through quality backlinks.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>Local SEO</h3><p>Target your local audience effectively for better conversions.</p></div>
   </div>
+</div>
+</section>
+<script>
+const cards = document.querySelectorAll('.orbit-container .card');
+let centerIndex = 1; // start with second card centered
+const gap = 400; // space between cards
 
-  <div class="shd-banner-r">
-    <img src="assets/images/metaverse/ar-vr-in-automotive-industry/curating-shd-2.webp">
-  </div>
-  
-                    <div class="container">
-                        
-                        <div class="team-intro">
-                            <h4>MEET OUR TEAM</h4>
-                            <p>The innovative minds behind TrainaXR's immersive learning experiences</p>
-                        </div>
-                        <div class="team-grid">
-                            <!-- CEO -->
-                            <div class="team-card">
-                                <div class="team-image">
-                                    <img src="assets/images/team/CTO.jpg" alt="CEO" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Mujahid Mohammed</h5>
-                                <div class="role">Chief Executive Officer</div>
-                                <div class="team-bio">
-                                    <p>The visionary behind “Practice in Pixels,” Mujahid Mohammed blends strategic insight with bold creativity 
-                                        to build XR training that doesn’t just simulate reality it saves lives and transforms industries. 
-                                        Backed by a Bachelor's in Business Administration, a Master’s in Business Administration, and a second 
-                                        Master’s in Business Analytics from the UK, Mujahid brings deep expertise and data-driven thinking to 
-                                        every project. With three years in marketing and a passion for innovation, he leads Traina XR in redefining 
-                                        how the world trains, making learning safer, smarter, and more scalable.</p></div>
-                            </div>
-                            
-                            <!-- CTO -->
-                            <div class="team-card">
-                                <div class="team-image">
-                                    <img src="assets/images/team/CTO.jpg" alt="CTO" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Nasir Yakoob</h5>
-                                <div class="role">Head of Operations – India</div>
-                                <div class="team-bio">
-                                    <p>A seasoned operations leader, Naseer Yakoob brings structure, speed, and scalability to Traina XR’s 
-                                        execution in India. With a deep understanding of project coordination, client relations, and on-ground
-                                         delivery, he ensures every XR solution we craft is built to the highest standard. From aligning teams to
-                                          streamlining production, Naseer turns big ideas into flawless outcomes. His leadership helps Traina XR run
-                                           like a well-oiled machine, innovating without compromise</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Creative Director -->
-                            <div class="team-card">
-                                
-                                <div class="team-image">
-                                    <img src="assets/images/team/Creative-Director.jpg" alt="Creative Director" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Mir Farqaan</h5>
-                                <div class="role">Head of US Operations</div>
-                                <div class="team-bio">
-                                    <p>With a foundation in Civil Engineering and a Master’s in Management from the University of Chicago, Mir Furqaan bridges
-                                         technical expertise with leadership finesse. He brings a builder’s precision and a strategist’s vision to Traina XR’s expansion 
-                                         across the United States. Whether it’s immersive simulations or enterprise rollouts, Mir ensures every XR experience is engineered 
-                                         for real-world impact and operational excellence.</p>
-                                    
-                                </div>
-                            </div>
+function updatePositions() {
+  cards.forEach((card, i) => {
+    const diff = (i - centerIndex + cards.length) % cards.length;
+    if (diff === 0) {
+      // Center card
+      card.style.transform = `translateX(-50%) scale(1.1)`;
+      card.style.opacity = 1;
+      card.style.zIndex = 3;
+    } else if (diff === cards.length - 1 || diff === -1) {
+      // Left card
+      card.style.transform = `translateX(calc(-50% - ${gap}px)) scale(0.9)`;
+      card.style.opacity = 0.6;
+      card.style.zIndex = 2;
+    } else if (diff === 1 || diff === -(cards.length - 1)) {
+      // Right card
+      card.style.transform = `translateX(calc(-50% + ${gap}px)) scale(0.9)`;
+      card.style.opacity = 0.6;
+      card.style.zIndex = 2;
+    } else {
+      // Hidden cards
+      card.style.transform = `translateX(-50%) scale(0.8)`;
+      card.style.opacity = 0;
+      card.style.zIndex = 0;
+    }
+  });
+}
 
-                            <!-- Head of Operations -->
-                            <div class="team-card">
-                                <div class="team-image">
-                                    <img src="assets/images/team/Operations.jpg" alt="Head of Operations" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Raj Kanjaraiya</h5>
-                                <div class="role">Head of Technology</div>
-                                <div class="team-bio">
-                                    <p>Raj is the technological powerhouse behind Traina XR. With a Bachelor’s in Mathematics, an M.Sc.
-                                         in Information Technology, and a Ph.D. in Augmented & Virtual Reality, he brings deep academic expertise 
-                                         to the forefront of immersive innovation. Backed by 4+ years of global AR/VR experience and a proven track 
-                                         record leading cross-functional teams, Raj transforms complex code into intuitive XR experiences that are 
-                                         as powerful as they are practical.</p> </div>
-                            </div>
+// Initial setup
+updatePositions();
 
-                            <!-- Lead XR Engineer -->
-                            <div class="team-card">
-                                <div class="team-image">
-                                    <img src="assets/images/team/Lead-Engineer.jpg" alt="Lead XR Engineer" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Priyanshu Thakur</h5>
-                                <div class="role">Digital Marketing Strategist.</div>
-                                <div class="team-bio">
-                                    <p>With over 5 years of experience in digital marketing, Priyanshu brings data-driven strategy and creative execution together
-                                         to fuel brand growth. He has helped companies amplify their online presence, generate leads, and drive measurable revenue 
-                                         through powerful campaigns across social, search, and content channels. At Traina XR, Priyanshu ensures our message reaches
-                                        the right audience, turning attention into engagement, and clicks into conversions.</p></div>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-image">
-                                    <img src="assets/images/team/Operations.jpg" alt="Head of Operations" loading="lazy" onerror="this.onerror=null;this.src='assets/images/team/placeholder.svg'">
-                                </div>
-                                <h5>Sahil Yadav</h5>
-                                <div class="role">Web Development & SEO Specialist</div>
-                                <div class="team-bio">
-                                    <p>Sahil is a seasoned full-stack developer with a portfolio of over 100+ optimized websites and applications across industries. 
-                                        With a keen eye for performance and precision, he builds seamless digital experiences that not only engage users but also rank on 
-                                        search engines. At Traina XR, Sahil powers our online presence, blending technical excellence, speed, and SEO to make immersive
-                                         training more accessible than ever.</p> </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </section>
-    <script src="assets/js/main.js"></script>
+// When any card is clicked, make it the center
+cards.forEach((card, i) => {
+  card.addEventListener('click', () => {
+    centerIndex = i;
+    updatePositions();
+  });
+});
+</script>
+
 </body>
 </html>
