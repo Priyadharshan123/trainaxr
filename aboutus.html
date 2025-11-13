@@ -725,6 +725,39 @@ h2 {
   .orbit-nav {
     display: flex;
   }
+
+  /* Enforce consistent card size & 50/50 image split on mobile only */
+  .orbit-container .card {
+    width: 250px !important;
+    height: 350px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  .orbit-container .card img {
+    width: 100% !important;
+    height: 70% !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    display: block !important;
+    border-radius: 20px 20px 0 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .orbit-container .card h3 {
+    margin-top: 20px !important;
+    
+    text-align: center !important;
+  }
+
+  .orbit-container .card p {
+    margin-top: 10px !important;
+    
+    text-align: center !important;
+    flex: 1 !important;
+  }
 }
 </style>
 
@@ -739,8 +772,8 @@ h2 {
     <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>YASIR YAKOOB</h3><p>Head of India Operations</p></div>
     <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>DHARSHAN</h3><p>Website Management</p></div>
     <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>SAHIL YADAV</h3><p>Website Management</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>LUV</h3><p>Marketing</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>RAJ KANJARIYA</h3><p>Head of Technology</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>LUV</h3><p>Marketing</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>RAJ KANJARIYA</h3><p>Head of Technology</p></div>
   </div>
   <div class="orbit-nav">
     <button class="nav-arrow prev" aria-label="Previous card">‹</button>
