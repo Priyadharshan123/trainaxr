@@ -138,7 +138,7 @@
                                 
                             </ul>
                         </li>
-                        <li><a href="contact.html" id="insights-nav"><span>Contact Us</span></a></li>
+                        
                         <li><a href="aboutus.html" id="insights-nav"><span>About Us</span></a></li>
                         
                         <li><a href="demo.html"><span>Request Demo</span></a></li>
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
              <div class="global-presence">
                         <h3 class="animate-on-scroll">Our Global Presence</h3>
-                        <p class="animate-on-scroll">Traina XR is built on a global vision and supported by a network of innovation hubs across three countries:</p>
+                        <p class="animate-on-scroll"></p>
                         <div class="locations-grid">
                             <div class="location-card animate-on-scroll">
                                 <h4>United Kingdom – Headquarters</h4>
@@ -231,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p>724 S Oakley Blvd, Unit-1<br>Chicago, Illinois 60612</p>
                             </div>
                         </div>
-                        <p class="global-footer animate-on-scroll">This global footprint allows us to deliver scalable XR solutions and provide dedicated support to clients worldwide.</p>
+                        <p class="global-footer animate-on-scroll"></p>
                     </div>
                 </div>
             </div>
@@ -245,10 +245,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  
 
    
-    <script>
-    // Lightweight scroll reveal + pointer + scroll parallax for hero
+    <script>   // scroll progress  move the image to the RIGHT off-screen and fade it out
+    
     document.addEventListener('DOMContentLoaded', function(){
-        // IntersectionObserver reveal
+        
         const els = document.querySelectorAll('.animate-on-scroll');
         const io = new IntersectionObserver((entries)=>{
             entries.forEach(ent => {
@@ -260,61 +260,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, {threshold: 0.12});
         els.forEach((el,i)=>{ el.style.transitionDelay = (i*0.06)+'s'; io.observe(el); });
 
-        // Pointer + scroll parallax for hero image
+        
         const hero = document.querySelector('.story-hero');
         const layer = document.querySelector('.parallax-layer');
         const heroImg = document.querySelector('.hero-img');
         if(!hero || !layer) return;
 
-        // state
-        let pointerX = 0, pointerY = 0; // in px
+        
+        let pointerX = 0, pointerY = 0; 
         let targetPointerX = 0, targetPointerY = 0;
         let lastScrollY = window.scrollY;
         let needsUpdate = false;
 
-        // pointer movement (small offsets)
+        
         hero.addEventListener('mousemove', function(e){
             const r = hero.getBoundingClientRect();
-            const px = (e.clientX - r.left)/r.width - 0.5; // -0.5..0.5
+            const px = (e.clientX - r.left)/r.width - 0.5; 
             const py = (e.clientY - r.top)/r.height - 0.5;
-            // map to pixels
-            targetPointerX = px * 18; // horizontal sway
-            targetPointerY = py * 8;  // vertical sway
+            
+            targetPointerX = px * 18; 
+            targetPointerY = py * 8;  
             needsUpdate = true;
         });
         hero.addEventListener('mouseleave', function(){ targetPointerX = 0; targetPointerY = 0; needsUpdate = true; });
 
-        // scroll-driven movement: compute progress that starts early (while hero is still visible)
+     
         function computeScrollProgress(){
             const r = hero.getBoundingClientRect();
             const vh = window.innerHeight || document.documentElement.clientHeight;
-            // We'll start the hide animation when the hero's top reaches 15% of the viewport height
-            // and finish when the hero top has moved up by 40% of its height.
-            const startTrigger = vh * 0.15; // when r.top <= startTrigger => progress starts
-            const endTrigger = - (r.height * 0.4); // when r.top <= endTrigger => progress = 1
+           
+            const startTrigger = vh * 0.15;
+            const endTrigger = - (r.height * 0.4); 
 
-            // If hero is below the startTrigger, progress is 0
+            
             if (r.top > startTrigger) return 0;
 
-            // compute linear progress between startTrigger and endTrigger
+            
             const raw = (startTrigger - r.top) / (startTrigger - endTrigger);
             const prog = Math.min(Math.max(raw, 0), 1);
             return prog;
         }
 
-        // RAF loop to smoothly interpolate pointer offsets and apply combined transform
+        
         function rafUpdate(){
-            // lerp pointer offsets
+            
             pointerX += (targetPointerX - pointerX) * 0.12;
             pointerY += (targetPointerY - pointerY) * 0.12;
 
-            // scroll progress
+           
             const prog = computeScrollProgress();
-            // as prog increases, move the image to the RIGHT off-screen and fade it out
+           
             const imgW = heroImg ? heroImg.getBoundingClientRect().width : (hero.getBoundingClientRect().width*0.6);
-            const offscreen = imgW * 1.4; // how far to move to hide fully
-            const scrollTx = prog * offscreen; // moves image right by up to offscreen px
-            const scrollTy = -prog * 8; // slight upward movement
+            const offscreen = imgW * 1.4; 
+            const scrollTx = prog * offscreen; 
+            const scrollTy = -prog * 8; 
             const scale = 1 - prog * 0.06;
             const opacity = Math.max(0, 1 - prog * 1.2);
 
@@ -323,9 +322,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             layer.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
             layer.style.opacity = opacity.toFixed(3);
 
-            // add subtle float to image if it's in view
+            
             if(heroImg && heroImg.classList.contains('in-view')){
-                // keep float via CSS animation; nothing needed here
+                
             }
 
             needsUpdate = false;
@@ -333,9 +332,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         requestAnimationFrame(rafUpdate);
 
-        // trigger updates on scroll
+        
         window.addEventListener('scroll', function(){ needsUpdate = true; lastScrollY = window.scrollY; });
-        // also on resize
+       
         window.addEventListener('resize', function(){ needsUpdate = true; });
     });
     </script>
@@ -366,19 +365,21 @@ This is a multi-line comment in HTML.
   text-align: center;
   width: 100%;
   max-width: 1200px;
+  
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 50px;
-  color: #0dcaf0;
+  margin-bottom: 80px;
+  color: #00AEEF;
+  
 }
 
 .orbit-container {
   position: relative;
   width: 1000px;
   height: 420px;
-  margin: 0 auto;
+  margin: 0 auto ;
   perspective: 1000px;
 }
 
@@ -409,40 +410,352 @@ h2 {
 
 .card h3 {
   font-size: 1.1rem;
-  margin: 10px 0;
-  color:#111
+  margin: 20px 0;
+  color:#111;
+  text-align:center;
 }
 
 .card p {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.4;
+  text-align:center;
+}
+
+/* Responsive: Scale container based on viewport */
+@media (max-width: 1400px) {
+  .orbit-container {
+    width: 900px;
+    height: 380px;
+  }
+  
+  .card {
+    width: 220px;
+    height: 320px;
+    padding: 18px;
+  }
+  
+  .card img {
+    height: 160px;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .orbit-container {
+    width: 750px;
+    height: 350px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 300px;
+    padding: 16px;
+  }
+  
+  .card img {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+  
+  .card h3 {
+    font-size: 0.95rem;
+    margin: 8px 0;
+  }
+  
+  .card p {
+    font-size: 0.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .team-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
+  
+  .orbit-container {
+    width: 100%;
+    max-width: 600px;
+    height: 380px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    width: 180px;
+    height: 280px;
+    padding: 14px;
+  }
+  
+  .card img {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+  
+  .card p {
+    font-size: 0.75rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orbit-container {
+    width: 100%;
+    max-width: 520px;
+    height: 340px;
+  }
+  
+  .card {
+    width: 160px;
+    height: 260px;
+    padding: 12px;
+  }
+  
+  .card img {
+    height: 105px;
+    margin-bottom: 8px;
+  }
+  
+  .card h3 {
+    font-size: 0.85rem;
+  }
+  
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-section {
+    padding: 40px 15px;
+    min-height: 80vh;
+  }
+  
+  .orbit-container {
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .card {
+    width: 140px;
+    height: 240px;
+    padding: 10px;
+  }
+  
+  .card img {
+    height: 90px;
+    margin-bottom: 6px;
+  }
+  
+  .card h3 {
+    font-size: 0.8rem;
+    margin: 4px 0;
+  }
+  
+  .card p {
+    font-size: 0.65rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 30px 10px;
+    min-height: 70vh;
+  }
+  
+  .orbit-container {
+    height: 260px;
+  }
+  
+  .card {
+    width: 120px;
+    height: 220px;
+    padding: 8px;
+  }
+  
+  .card img {
+    height: 75px;
+    margin-bottom: 5px;
+  }
+  
+  .card h3 {
+    font-size: 0.75rem;
+    margin: 3px 0;
+  }
+  
+  .card p {
+    font-size: 0.6rem;
+  }
+  
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Handle minimized/resized windows */
+@media (max-height: 600px) and (min-width: 900px) {
+  .team-section {
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .orbit-container {
+    height: 300px;
+  }
+}
+
+@media (max-height: 500px) {
+  .team-section {
+    min-height: 500px;
+  }
+  
+  .orbit-container {
+    height: 250px;
+  }
+  
+  .card {
+    width: 140px;
+    height: 200px;
+  }
+  
+  .card img {
+    height: 70px;
+    margin-bottom: 5px;
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Navigation arrows styling */
+.orbit-nav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Wrapper for carousel and navigation */
+.orbit-carousel-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color:transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  color: #f0ebeb;
+  font-weight: 100;
+  transition: all 150ms ease;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-arrow:hover {
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.nav-arrow.prev {
+  left: 10px;
+}
+
+.nav-arrow.next {
+  right: 10px;
+}
+
+/* Show arrows on small screens */
+@media (max-width: 900px) {
+  .orbit-nav {
+    display: flex;
+  }
 }
 </style>
 
 <section class="team-section">
 <div class="orbit-section">
-  <h2>The Team Turning Vision Into Virtual Reality</h2>
-  <div class="orbit-container">
-    <div class="card"><img src="https://images.unsplash.com/photo-1603415526960-f7e0328ad60a" alt=""><h3>Custom SEO Services</h3><p>Organic SEO strategies to drive traffic with real growth metrics.</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt=""><h3>SEO Website Design</h3><p>We build SEO-optimized websites with powerful design and performance.</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793" alt=""><h3>SEO Consulting</h3><p>Data-driven consulting to enhance online presence and visibility.</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt=""><h3>Content Marketing</h3><p>Create SEO-friendly content that engages and converts.</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1591696331117-7c64d4e77a0a" alt=""><h3>Link Building</h3><p>Boost your website authority through quality backlinks.</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>Local SEO</h3><p>Target your local audience effectively for better conversions.</p></div>
+  <h2>THE TEAM TUNING VISION INTO <br>VIRTUAL REALITY</h2>
+  <div class="orbit-carousel-wrapper">
+    <div class="orbit-container">
+    
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>MIR FURQAAN</h3><p>Head of U.S. Operations</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>MUJAHID MOHAMMED</h3><p>Founder & Architect of “Practice in Pixels”</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>YASIR YAKOOB</h3><p>Head of India Operations</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>DHARSHAN</h3><p>Website Management</p></div>
+    <div class="card"><img src="assets\images\team\placeholder.svg" alt=""><h3>SAHIL YADAV</h3><p>Website Management</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>LUV</h3><p>Marketing</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1612831455543-2fdb3aefb1e2" alt=""><h3>RAJ KANJARIYA</h3><p>Head of Technology</p></div>
+  </div>
+  <div class="orbit-nav">
+    <button class="nav-arrow prev" aria-label="Previous card">‹</button>
+    <button class="nav-arrow next" aria-label="Next card">›</button>
+  </div>
   </div>
 </div>
 </section>
 <script>
 const cards = document.querySelectorAll('.orbit-container .card');
-let centerIndex = 1; // start with second card centered
-const gap = 400; // space between cards
+let centerIndex = 1; 
+const gap = 400; 
 
 function updatePositions() {
   cards.forEach((card, i) => {
     const diff = (i - centerIndex + cards.length) % cards.length;
     if (diff === 0) {
-      // Center card
+      
       card.style.transform = `translateX(-50%) scale(1.1)`;
       card.style.opacity = 1;
       card.style.zIndex = 3;
@@ -452,12 +765,12 @@ function updatePositions() {
       card.style.opacity = 0.6;
       card.style.zIndex = 2;
     } else if (diff === 1 || diff === -(cards.length - 1)) {
-      // Right card
+     
       card.style.transform = `translateX(calc(-50% + ${gap}px)) scale(0.9)`;
       card.style.opacity = 0.6;
       card.style.zIndex = 2;
     } else {
-      // Hidden cards
+      
       card.style.transform = `translateX(-50%) scale(0.8)`;
       card.style.opacity = 0;
       card.style.zIndex = 0;
@@ -465,10 +778,20 @@ function updatePositions() {
   });
 }
 
-// Initial setup
+
 updatePositions();
 
-// When any card is clicked, make it the center
+// Navigation arrow functionality
+document.querySelector('.nav-arrow.prev').addEventListener('click', () => {
+  centerIndex = (centerIndex - 1 + cards.length) % cards.length;
+  updatePositions();
+});
+
+document.querySelector('.nav-arrow.next').addEventListener('click', () => {
+  centerIndex = (centerIndex + 1) % cards.length;
+  updatePositions();
+});
+
 cards.forEach((card, i) => {
   card.addEventListener('click', () => {
     centerIndex = i;
