@@ -397,7 +397,7 @@ h2 {
   
   cursor: pointer;
   opacity: 0;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.45s ease-in-out;
   transform: translateX(-50%) scale(0.9);
 }
 
@@ -423,6 +423,17 @@ h2 {
   line-height: 1.4;
   text-align:center;
   
+}
+
+/* Hover lift for non-center cards */
+.orbit-container .card:not(.center):hover {
+  top: -12px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Make sure the center card doesn't get the hover lift */
+.orbit-container .card.center {
+  top: 0 !important;
 }
 
 /* Tablet: ≤768px */
@@ -667,21 +678,24 @@ function updatePositions() {
   cards.forEach((card, i) => {
     const diff = (i - centerIndex + cards.length) % cards.length;
     if (diff === 0) {
-      
-      card.style.transform = `translateX(-50%) scale(1.1)`;
-      card.style.opacity = 1;
-      card.style.zIndex = 3;
+        card.classList.add('center');
+        card.style.transform = `translateX(-50%) scale(1.1)`;
+        card.style.opacity = 1;
+        card.style.zIndex = 3;
     } else if (diff === cards.length - 1 || diff === -1) {
       // Left card
+        card.classList.remove('center');
       card.style.transform = `translateX(calc(-50% - ${gap}px)) scale(0.9)`;
       card.style.opacity = 0.6;
       card.style.zIndex = 2;
     } else if (diff === 1 || diff === -(cards.length - 1)) {
+        card.classList.remove('center');
      
       card.style.transform = `translateX(calc(-50% + ${gap}px)) scale(0.9)`;
       card.style.opacity = 0.6;
       card.style.zIndex = 2;
     } else {
+        card.classList.remove('center');
       
       card.style.transform = `translateX(-50%) scale(0.8)`;
       card.style.opacity = 0;
